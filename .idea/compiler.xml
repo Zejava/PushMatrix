@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="PushMatrix-Web" />
+        <module name="PushMatrix-service-api" />
+        <module name="PushMatrix-serviceimpl-api" />
+        <module name="PushMatrix-Support" />
+        <module name="PushMatrix-Common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="PushMatrix" options="-parameters" />
+      <module name="PushMatrix-Common" options="-parameters" />
+      <module name="PushMatrix-Support" options="-parameters" />
+      <module name="PushMatrix-Web" options="-parameters" />
+      <module name="PushMatrix-service-api" options="-parameters" />
+      <module name="PushMatrix-serviceimpl-api" options="-parameters" />
+    </option>
+  </component>
+</project>
