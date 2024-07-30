@@ -21,3 +21,66 @@
 2024-07-30 09:21:46.440 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2024-07-30 09:21:46.453 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
 2024-07-30 09:21:46.459 [main] INFO  c.example.pushmatrixweb.PushMatrixWebApplication - Started PushMatrixWebApplication in 1.239 seconds (process running for 1.934)
+2024-07-30 20:41:55.794 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 18420 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:41:55.795 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:45:22.046 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 34284 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:45:22.048 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:46:19.811 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 30864 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:46:19.816 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:47:19.382 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 25148 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:47:19.384 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:48:13.834 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 25540 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:48:13.836 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:49:52.614 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 34476 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:49:52.616 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:51:02.405 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 33496 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:51:02.406 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:52:23.115 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 on pzq with PID 22304 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:52:23.117 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to default profiles: default
+2024-07-30 20:53:01.505 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 19480 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:53:01.507 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-30 20:53:02.092 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-30 20:53:02.099 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-30 20:53:02.100 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-30 20:53:02.100 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-30 20:53:02.131 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-30 20:53:02.131 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 587 ms
+2024-07-30 20:53:02.212 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-30 20:53:02.223 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-30 20:53:29.705 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 32188 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:53:29.707 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-30 20:53:30.275 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-30 20:53:30.282 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-30 20:53:30.283 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-30 20:53:30.283 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-30 20:53:30.314 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-30 20:53:30.315 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 577 ms
+2024-07-30 20:53:30.362 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-30 20:53:30.372 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-30 20:55:05.764 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 19432 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 20:55:05.765 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-30 20:55:06.361 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-30 20:55:06.368 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-30 20:55:06.369 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-30 20:55:06.370 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-30 20:55:06.402 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-30 20:55:06.402 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 602 ms
+2024-07-30 20:55:06.474 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-30 20:55:06.483 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-30 21:01:09.485 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 35072 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-07-30 21:01:09.486 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-30 21:01:10.113 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-30 21:01:10.121 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-30 21:01:10.122 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-30 21:01:10.122 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-30 21:01:10.155 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-30 21:01:10.156 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 636 ms
+2024-07-30 21:01:10.534 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-30 21:01:10.547 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-30 21:01:10.552 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Started PushMatrixApplication in 1.369 seconds (process running for 1.991)

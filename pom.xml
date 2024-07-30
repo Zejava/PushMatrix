@@ -24,10 +24,7 @@
 
     <!-- properties 是全局设置,可以设置整个maven项目的编译器 JDK版本 -->
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- 重点  -->
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <java.version>1.8</java.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -64,6 +61,11 @@
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>
                 <version>4.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okio</groupId>
+                <artifactId>okio</artifactId>
+                <version>3.2.0</version>
             </dependency>
 
             <!--fastjson包-->

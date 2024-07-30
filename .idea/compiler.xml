@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="PushMatrix-Handler" />
         <module name="PushMatrix-Web" />
         <module name="PushMatrix-service-api" />
         <module name="PushMatrix-serviceimpl-api" />
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="PushMatrix" options="" />
       <module name="PushMatrix-Common" options="-parameters" />
+      <module name="PushMatrix-Handler" options="-parameters" />
       <module name="PushMatrix-Support" options="-parameters" />
       <module name="PushMatrix-Web" options="-parameters" />
       <module name="PushMatrix-service-api" options="-parameters" />

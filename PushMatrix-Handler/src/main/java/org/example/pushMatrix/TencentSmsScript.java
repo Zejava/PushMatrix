@@ -1,4 +1,4 @@
-package org.example;
+package org.example.pushMatrix;
 
 import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSON;
@@ -11,7 +11,7 @@ import com.tencentcloudapi.sms.v20190711.SmsClient;
 import com.tencentcloudapi.sms.v20190711.models.SendSmsRequest;
 import com.tencentcloudapi.sms.v20190711.models.SendSmsResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.example.pojo.SmsParam;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -25,13 +25,23 @@ public class TencentSmsScript {
     private static final String REGION = "ap-guangzhou";
 
     /**
-     * 账号相关 TODO
+     * 账号相关参数
      */
-    private final static String SECRET_ID = "//";
-    private final static String SECRET_KEY = "//";
-    private static final String SMS_SDK_APP_ID = "//";
-    private static final String TEMPLATE_ID = "//";
-    private static final String SIGN_NAME = "//";
+    @Value("${tencent.sms.account.secret-id}")
+    private String SECRET_ID;
+
+    @Value("${tencent.sms.account.secret-key}")
+    private String SECRET_KEY;
+
+    @Value("${tencent.sms.account.sms-sdk-app-id}")
+    private String SMS_SDK_APP_ID;
+
+    @Value("${tencent.sms.account.template-id}")
+    private String TEMPLATE_ID;
+
+    @Value("${tencent.sms.account.sign_name}")
+    private String SIGN_NAME;
+
 
     public String send(SmsParam smsParam) {
         try {

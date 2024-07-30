@@ -1,4 +1,4 @@
-package org.example.config;
+package org.example.pushMatrix.config;
 
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
