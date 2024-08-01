@@ -33,4 +33,4 @@ private TencentSmsScript tencentSmsScript;
         System.out.println();
         return tencentSmsScript.send(smsParam);
     }
-    }
+}
