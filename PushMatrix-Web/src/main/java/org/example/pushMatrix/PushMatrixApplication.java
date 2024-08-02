@@ -1,4 +1,5 @@
 package org.example.pushMatrix;
+import org.example.pushMatrix.pojo.entity.SmsParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
