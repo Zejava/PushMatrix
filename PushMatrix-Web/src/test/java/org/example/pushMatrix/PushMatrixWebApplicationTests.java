@@ -30,6 +30,4 @@ private RedisTemplate redisTemplate;
 
         jpaService.insert(smsParam);
     }
-
-
 }
