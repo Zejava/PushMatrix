@@ -2,6 +2,7 @@ package org.example.pushMatrix.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 /**
  * @Author 泽
@@ -9,6 +10,7 @@ import lombok.Getter;
  * 接收者的id类型枚举
  */
 @Getter
+@ToString
 @AllArgsConstructor
 public enum IdType {
     USER_ID(10, "userid"),//用户id

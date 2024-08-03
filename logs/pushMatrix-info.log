@@ -1,42 +1,595 @@
-2024-07-31 18:59:45.044 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 44556 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
-2024-07-31 18:59:45.047 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-31 18:59:45.694 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-31 18:59:45.704 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-07-31 18:59:45.705 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-31 18:59:45.705 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-07-31 18:59:45.744 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-31 18:59:45.744 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 665 ms
-2024-07-31 18:59:46.108 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-07-31 18:59:46.121 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-31 18:59:46.126 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Started PushMatrixApplication in 1.397 seconds (process running for 2.29)
-2024-07-31 19:01:26.330 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-31 19:01:26.331 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-31 19:01:26.332 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-07-31 19:06:03.086 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 28648 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
-2024-07-31 19:06:03.087 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-31 19:06:03.708 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-31 19:06:03.716 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-07-31 19:06:03.717 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-31 19:06:03.717 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-07-31 19:06:03.748 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-31 19:06:03.748 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 623 ms
-2024-07-31 19:06:04.081 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-07-31 19:06:04.093 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-31 19:06:04.106 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Started PushMatrixApplication in 1.332 seconds (process running for 1.897)
-2024-07-31 19:06:04.716 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-31 19:06:04.716 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-31 19:06:04.717 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-07-31 19:36:34.285 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 44252 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
-2024-07-31 19:36:34.286 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-31 19:36:34.881 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-31 19:36:34.889 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-07-31 19:36:34.890 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-31 19:36:34.890 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-07-31 19:36:34.924 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-31 19:36:34.924 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 605 ms
-2024-07-31 19:36:35.260 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-07-31 19:36:35.277 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-31 19:36:35.285 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Started PushMatrixApplication in 1.26 seconds (process running for 1.834)
-2024-07-31 19:36:43.759 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-31 19:36:43.759 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-31 19:36:43.760 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-03 10:58:25.933 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 7932 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-08-03 10:58:25.937 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-03 10:58:26.544 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 10:58:26.546 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-03 10:58:26.677 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 2 JPA repository interfaces.
+2024-08-03 10:58:26.693 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 10:58:26.694 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-03 10:58:26.705 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.MessageTemplateDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 10:58:26.705 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.SmsRecordDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 10:58:26.705 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2024-08-03 10:58:26.741 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-03 10:59:25.738 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 48492 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-08-03 10:59:25.739 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-03 10:59:26.293 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 10:59:26.295 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-03 10:59:26.426 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125 ms. Found 2 JPA repository interfaces.
+2024-08-03 10:59:26.441 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 10:59:26.442 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-03 10:59:26.452 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.MessageTemplateDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 10:59:26.453 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.SmsRecordDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 10:59:26.453 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2024-08-03 10:59:26.489 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-03 11:07:07.944 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 39620 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-08-03 11:07:07.945 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-03 11:07:08.477 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 11:07:08.478 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-03 11:07:08.613 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 2 JPA repository interfaces.
+2024-08-03 11:07:08.630 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 11:07:08.631 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-03 11:07:08.642 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.MessageTemplateDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 11:07:08.642 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.SmsRecordDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 11:07:08.642 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2024-08-03 11:07:09.104 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-03 11:07:09.113 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-03 11:07:09.115 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-03 11:07:09.115 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-03 11:07:09.156 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-03 11:07:09.157 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1179 ms
+2024-08-03 11:07:09.275 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2024-08-03 11:07:09.514 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariCP - Added connection com.mysql.jdbc.JDBC4Connection@421ead7e
+2024-08-03 11:07:09.515 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2024-08-03 11:07:09.549 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-03 11:07:09.601 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-03 11:07:09.633 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-03 11:07:09.905 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-03 11:07:10.613 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-03 11:07:10.615 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-03 11:07:11.575 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-03 11:07:11.594 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-03 11:07:11.633 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.101.128]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-austinGroup1-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = austinGroup1
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-08-03 11:07:11.677 [main] INFO  o.a.k.c.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+2024-08-03 11:07:11.688 [main] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-03 11:07:11.688 [main] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-03 11:07:11.688 [main] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-08-03 11:07:11.688 [main] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-03 11:07:11.689 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-austinGroup1-1 unregistered
+2024-08-03 11:07:11.691 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-08-03 11:07:11.711 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-03 11:07:11.713 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown initiated...
+2024-08-03 11:07:11.715 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown completed.
+2024-08-03 11:07:11.725 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-03 11:11:23.938 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 41012 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-08-03 11:11:23.940 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-03 11:11:24.505 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 11:11:24.506 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-03 11:11:24.647 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 2 JPA repository interfaces.
+2024-08-03 11:11:24.663 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 11:11:24.665 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-03 11:11:24.676 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.MessageTemplateDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 11:11:24.677 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.SmsRecordDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 11:11:24.677 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2024-08-03 11:11:25.190 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-03 11:11:25.200 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-03 11:11:25.202 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-03 11:11:25.202 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-03 11:11:25.245 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-03 11:11:25.245 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1265 ms
+2024-08-03 11:11:25.361 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2024-08-03 11:11:25.526 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariCP - Added connection com.mysql.jdbc.JDBC4Connection@38c761e9
+2024-08-03 11:11:25.528 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2024-08-03 11:11:25.563 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-03 11:11:25.617 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-03 11:11:25.652 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-03 11:11:25.935 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-03 11:11:26.636 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-03 11:11:26.640 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-03 11:11:27.594 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-03 11:11:27.612 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-03 11:11:27.649 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.101.128:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-austinGroup1-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = austinGroup1
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-08-03 11:11:27.693 [main] INFO  o.a.k.c.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+2024-08-03 11:11:27.766 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.7.1
+2024-08-03 11:11:27.766 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: e2494e6ffb89f828
+2024-08-03 11:11:27.766 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1722654687765
+2024-08-03 11:11:27.770 [main] INFO  o.a.k.c.consumer.internals.LegacyKafkaConsumer - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Subscribed to topic(s): pushMatrix
+2024-08-03 11:11:27.781 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Started PushMatrixApplication in 4.283 seconds (process running for 5.062)
+2024-08-03 11:11:28.216 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Cluster ID: 0M7Tcs-SQNaWocSP9eMFCQ
+2024-08-03 11:11:28.906 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Discovered group coordinator 192.168.101.128:9092 (id: 2147483647 rack: null)
+2024-08-03 11:11:28.909 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] (Re-)joining group
+2024-08-03 11:11:28.938 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Request joining group due to: need to re-join with the given member-id: consumer-austinGroup1-1-86af388d-b745-4a3a-8d67-71f3ffeecae8
+2024-08-03 11:11:28.939 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] (Re-)joining group
+2024-08-03 11:11:28.956 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Successfully joined group with generation Generation{generationId=1, memberId='consumer-austinGroup1-1-86af388d-b745-4a3a-8d67-71f3ffeecae8', protocol='range'}
+2024-08-03 11:11:28.961 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Finished assignment for group at generation 1: {consumer-austinGroup1-1-86af388d-b745-4a3a-8d67-71f3ffeecae8=Assignment(partitions=[pushMatrix-0])}
+2024-08-03 11:11:29.027 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Successfully synced group in generation Generation{generationId=1, memberId='consumer-austinGroup1-1-86af388d-b745-4a3a-8d67-71f3ffeecae8', protocol='range'}
+2024-08-03 11:11:29.028 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Notifying assignor about the new Assignment(partitions=[pushMatrix-0])
+2024-08-03 11:11:29.031 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Adding newly assigned partitions: pushMatrix-0
+2024-08-03 11:11:29.040 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Found no committed offset for partition pushMatrix-0
+2024-08-03 11:11:29.045 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Found no committed offset for partition pushMatrix-0
+2024-08-03 11:11:29.058 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Resetting offset for partition pushMatrix-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.101.128:9092 (id: 0 rack: null)], epoch=0}}.
+2024-08-03 11:11:29.073 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - austinGroup1: partitions assigned: [pushMatrix-0]
+2024-08-03 11:12:44.795 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Revoke previously assigned partitions pushMatrix-0
+2024-08-03 11:12:44.796 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - austinGroup1: partitions revoked: [pushMatrix-0]
+2024-08-03 11:12:44.797 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Member consumer-austinGroup1-1-86af388d-b745-4a3a-8d67-71f3ffeecae8 sending LeaveGroup request to coordinator 192.168.101.128:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-08-03 11:12:44.797 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-08-03 11:12:44.797 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Request joining group due to: consumer pro-actively leaving the group
+2024-08-03 11:12:44.797 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.LegacyKafkaConsumer - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Unsubscribed all topics or patterns and assigned partitions
+2024-08-03 11:12:44.798 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-08-03 11:12:44.799 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Request joining group due to: consumer pro-actively leaving the group
+2024-08-03 11:12:44.936 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-03 11:12:44.936 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-03 11:12:44.936 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-08-03 11:12:44.936 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-03 11:12:44.941 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-austinGroup1-1 unregistered
+2024-08-03 11:12:44.942 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - austinGroup1: Consumer stopped
+2024-08-03 11:12:44.967 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-03 11:12:44.970 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown initiated...
+2024-08-03 11:12:44.973 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown completed.
+2024-08-03 11:14:53.487 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Starting PushMatrixApplication using Java 21.0.2 with PID 8996 (E:\PushMatrix\PushMatrix-Web\target\classes started by pzq1 in E:\PushMatrix)
+2024-08-03 11:14:53.488 [main] INFO  org.example.pushMatrix.PushMatrixApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-03 11:14:54.092 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 11:14:54.093 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-03 11:14:54.236 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136 ms. Found 2 JPA repository interfaces.
+2024-08-03 11:14:54.252 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-03 11:14:54.253 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-03 11:14:54.265 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.MessageTemplateDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 11:14:54.266 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.pushMatrix.dao.SmsRecordDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-03 11:14:54.266 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2024-08-03 11:14:54.774 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-03 11:14:54.784 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-03 11:14:54.785 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-03 11:14:54.785 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-03 11:14:54.833 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-03 11:14:54.833 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1303 ms
+2024-08-03 11:14:54.958 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2024-08-03 11:14:55.144 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariCP - Added connection com.mysql.jdbc.JDBC4Connection@421ead7e
+2024-08-03 11:14:55.146 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2024-08-03 11:14:55.190 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-03 11:14:55.254 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-03 11:14:55.290 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-03 11:14:55.591 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-03 11:14:56.351 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-03 11:14:56.354 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-03 11:14:57.400 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-03 11:14:57.415 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-03 11:14:57.454 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.101.128:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-austinGroup1-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = austinGroup1
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-08-03 11:14:57.508 [main] INFO  o.a.k.c.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+2024-08-03 11:14:57.590 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.7.1
+2024-08-03 11:14:57.590 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: e2494e6ffb89f828
+2024-08-03 11:14:57.590 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1722654897589
+2024-08-03 11:14:57.594 [main] INFO  o.a.k.c.consumer.internals.LegacyKafkaConsumer - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Subscribed to topic(s): pushMatrix
+2024-08-03 11:14:57.606 [main] INFO  org.example.pushMatrix.PushMatrixApplication - Started PushMatrixApplication in 4.546 seconds (process running for 5.36)
+2024-08-03 11:14:57.943 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Cluster ID: 0M7Tcs-SQNaWocSP9eMFCQ
+2024-08-03 11:14:57.944 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Discovered group coordinator 192.168.101.128:9092 (id: 2147483647 rack: null)
+2024-08-03 11:14:57.946 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] (Re-)joining group
+2024-08-03 11:14:57.960 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Request joining group due to: need to re-join with the given member-id: consumer-austinGroup1-1-5e81bd74-5fb2-42e9-8f70-fc344885bc18
+2024-08-03 11:14:57.960 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] (Re-)joining group
+2024-08-03 11:14:57.964 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Successfully joined group with generation Generation{generationId=3, memberId='consumer-austinGroup1-1-5e81bd74-5fb2-42e9-8f70-fc344885bc18', protocol='range'}
+2024-08-03 11:14:57.968 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Finished assignment for group at generation 3: {consumer-austinGroup1-1-5e81bd74-5fb2-42e9-8f70-fc344885bc18=Assignment(partitions=[pushMatrix-0])}
+2024-08-03 11:14:57.975 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Successfully synced group in generation Generation{generationId=3, memberId='consumer-austinGroup1-1-5e81bd74-5fb2-42e9-8f70-fc344885bc18', protocol='range'}
+2024-08-03 11:14:57.976 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Notifying assignor about the new Assignment(partitions=[pushMatrix-0])
+2024-08-03 11:14:57.979 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Adding newly assigned partitions: pushMatrix-0
+2024-08-03 11:14:57.996 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.clients.consumer.internals.ConsumerUtils - Setting offset for partition pushMatrix-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.101.128:9092 (id: 0 rack: null)], epoch=0}}
+2024-08-03 11:14:57.998 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - austinGroup1: partitions assigned: [pushMatrix-0]
+2024-08-03 11:15:06.605 [http-nio-8080-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-03 11:15:06.605 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-03 11:15:06.606 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-03 11:15:06.755 [http-nio-8080-exec-3] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [192.168.101.128:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = PushMatrix-Web-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-08-03 11:15:06.756 [http-nio-8080-exec-3] INFO  o.a.k.c.telemetry.internals.KafkaMetricsCollector - initializing Kafka metrics collector
+2024-08-03 11:15:06.765 [http-nio-8080-exec-3] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=PushMatrix-Web-producer-1] Instantiated an idempotent producer.
+2024-08-03 11:15:06.779 [http-nio-8080-exec-3] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.7.1
+2024-08-03 11:15:06.780 [http-nio-8080-exec-3] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: e2494e6ffb89f828
+2024-08-03 11:15:06.780 [http-nio-8080-exec-3] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1722654906779
+2024-08-03 11:15:06.787 [kafka-producer-network-thread | PushMatrix-Web-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=PushMatrix-Web-producer-1] Cluster ID: 0M7Tcs-SQNaWocSP9eMFCQ
+2024-08-03 11:15:06.795 [kafka-producer-network-thread | PushMatrix-Web-producer-1] INFO  o.a.k.c.producer.internals.TransactionManager - [Producer clientId=PushMatrix-Web-producer-1] ProducerId set to 0 with epoch 0
+2024-08-03 11:15:06.858 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.example.pushMatrix.kafkatest.UserConsumer - >>>>>>>>>> record =Optional[{"state":"0","userid":"12","username":"jhp"}]
+2024-08-03 11:15:19.373 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Revoke previously assigned partitions pushMatrix-0
+2024-08-03 11:15:19.374 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - austinGroup1: partitions revoked: [pushMatrix-0]
+2024-08-03 11:15:19.374 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Member consumer-austinGroup1-1-5e81bd74-5fb2-42e9-8f70-fc344885bc18 sending LeaveGroup request to coordinator 192.168.101.128:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-08-03 11:15:19.375 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-08-03 11:15:19.375 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Request joining group due to: consumer pro-actively leaving the group
+2024-08-03 11:15:19.375 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.LegacyKafkaConsumer - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Unsubscribed all topics or patterns and assigned partitions
+2024-08-03 11:15:19.376 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-08-03 11:15:19.376 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-austinGroup1-1, groupId=austinGroup1] Request joining group due to: consumer pro-actively leaving the group
+2024-08-03 11:15:19.406 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-03 11:15:19.406 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-03 11:15:19.406 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-08-03 11:15:19.406 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-03 11:15:19.411 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-austinGroup1-1 unregistered
+2024-08-03 11:15:19.411 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.kafka.listener.KafkaMessageListenerContainer - austinGroup1: Consumer stopped
+2024-08-03 11:15:19.446 [SpringApplicationShutdownHook] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=PushMatrix-Web-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-08-03 11:15:19.449 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-03 11:15:19.449 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-03 11:15:19.449 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-08-03 11:15:19.449 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-03 11:15:19.450 [SpringApplicationShutdownHook] INFO  org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for PushMatrix-Web-producer-1 unregistered
+2024-08-03 11:15:19.456 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-03 11:15:19.458 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown initiated...
+2024-08-03 11:15:19.460 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown completed.

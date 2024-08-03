@@ -2,6 +2,7 @@ package org.example.pushMatrix.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 /**
  * @Author 泽
@@ -9,6 +10,7 @@ import lombok.Getter;
  */
 @AllArgsConstructor
 @Getter
+@ToString
 public enum SmsStatus {
     SEND_SUCCESS(10,"调用渠道接口发送成功"),
     RECEIVE_SUCCESS(20,"用户收到短信(收到渠道短信回执，状态成功)"),

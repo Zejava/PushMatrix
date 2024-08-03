@@ -1,7 +1,6 @@
 package org.example.pushMatrix;
 
 import jakarta.annotation.Resource;
-import org.example.pushMatrix.pojo.entity.SmsParam;
 import org.springframework.stereotype.Service;
 
 @Service

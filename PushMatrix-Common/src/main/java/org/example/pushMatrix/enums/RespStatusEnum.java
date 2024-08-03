@@ -1,4 +1,4 @@
-package org.example.pushMatrix.constant;
+package org.example.pushMatrix.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

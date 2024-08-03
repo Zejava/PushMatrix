@@ -2,6 +2,7 @@ package org.example.pushMatrix.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 /**
  * @Author 泽
@@ -10,6 +11,7 @@ import lombok.Getter;
  */
 @AllArgsConstructor
 @Getter
+@ToString
 public enum TemplateType {
     OPERATION(10, "运营类的模板"),
     TECHNOLOGY(20, "技术类的模板"),

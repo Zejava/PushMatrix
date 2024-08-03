@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
  * 发送消息的渠道类型枚举
  */
 @AllArgsConstructor
+@ToString
 @Getter
 public enum ChannelType {
     //目前实现了短信 todo

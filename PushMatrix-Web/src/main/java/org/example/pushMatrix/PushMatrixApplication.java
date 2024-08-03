@@ -1,5 +1,5 @@
 package org.example.pushMatrix;
-import org.example.pushMatrix.pojo.entity.SmsParam;
+import org.example.pushMatrix.domain.SmsParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,6 +32,6 @@ private TencentSmsScript tencentSmsScript;
                 .content(content)
                 .build();
         System.out.println();
-        return tencentSmsScript.send(smsParam);
+//        return tencentSmsScript.send(smsParam);
     }
 }

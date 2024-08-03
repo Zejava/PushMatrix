@@ -2,6 +2,7 @@ package org.example.pushMatrix.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 /**
  * @Author 泽
@@ -9,6 +10,7 @@ import lombok.Getter;
  * 所要发送的消息类型枚举
  */
 @AllArgsConstructor
+@ToString
 @Getter
 public enum MessageType {
     NOTICE(10,"通知类消息"),

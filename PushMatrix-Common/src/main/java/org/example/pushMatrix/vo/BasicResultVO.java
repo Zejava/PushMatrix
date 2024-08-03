@@ -1,10 +1,10 @@
-package org.example.pushMatrix.pojo.vo;
+package org.example.pushMatrix.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.example.pushMatrix.constant.RespStatusEnum;
+import org.example.pushMatrix.enums.RespStatusEnum;
 
 /**
  * @Author 泽

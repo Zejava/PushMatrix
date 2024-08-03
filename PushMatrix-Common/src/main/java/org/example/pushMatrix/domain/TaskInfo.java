@@ -1,16 +1,21 @@
-package org.example.pushMatrix.pojo.entity;
+package org.example.pushMatrix.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
 /**
  * @Author 泽
  * @Date 2024/8/2 22:25
+ * 消息任务类，管理消息模板的
  */
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class TaskInfo {
     /**
      * 消息模板Id
