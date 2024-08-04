@@ -27,7 +27,11 @@ public enum RespStatusEnum {
      */
     SERVICE_ERROR("B001", "服务执行异常"),
     RESOURCE_NOT_FOUND("B0404", "资源不存在"),
-    ;
+    CONTEXT_IS_NULL("A001","流程上下文为空" ),
+    BUSINESS_CODE_IS_NULL("A002","业务代码为空" ),
+    PROCESS_TEMPLATE_IS_NULL("A003","流程模板为空" ),
+    PROCESS_LIST_IS_NULL("A004","模板列表为空" ),
+    TEMPLATE_NOT_FOUND("A005","未找到模板" );
     /**
      * 响应状态
      */

@@ -96,7 +96,16 @@
                 <artifactId>tencentcloud-sdk-java</artifactId>
                 <version>3.1.390</version>
             </dependency>
-<!--            kafka-->
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>PushMatrix-service-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>PushMatrix-serviceimpl-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

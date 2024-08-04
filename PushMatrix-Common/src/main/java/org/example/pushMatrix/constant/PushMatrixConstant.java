@@ -5,7 +5,7 @@ package org.example.pushMatrix.constant;
  * @Date 2024/8/3 17:03
  * 用来设置项目中的基础常量信息
  */
-public class PushMatrix {
+public class PushMatrixConstant {
     /**
      * boolean转换
      */

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.pushMatrix.dto.ContentModel;
 
 import java.util.Set;
 
@@ -46,9 +47,12 @@ public class TaskInfo {
      */
     private Integer msgType;
     /**
-     * 发送文案内容，这里后续需要优化，消息内容不一定是String类型 todo
+     * 发送文案模型
+     * message_template表存储的content是JSON格式(所有内容都会塞进去)
+     * 但是不同的渠道要发送的内容不一样 比如发push会有img
+     * 所以会有ContentModel用来容纳不同的消息体
      */
-    private String content;
+    private ContentModel contentModel;
     /**
      * 发送消息的账号（邮件下可有多个发送账号、短信可有多个发送账号..）
      */

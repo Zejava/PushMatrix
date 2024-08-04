@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.example.pushMatrix.dto.SmsContentModel;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,21 +17,25 @@ import org.springframework.stereotype.Service;
 @Getter
 public enum ChannelType {
     //目前实现了短信 todo
-    IM(10, "IM(站内信)"),
-    PUSH(20, "push(通知栏)"),
-    SMS(30, "sms(短信)"),
-    EMAIL(40, "email(邮件)"),
-    OFFICIAL_ACCOUNT(50, "OfficialAccounts(服务号)"),
-    MINI_PROGRAM(60, "miniProgram(小程序)")
+    SMS(30, "sms(短信)", SmsContentModel.class),
+//    EMAIL(40, "email(邮件)",),
+//    OFFICIAL_ACCOUNT(50, "OfficialAccounts(服务号)"),
+//    MINI_PROGRAM(60, "miniProgram(小程序)")
     ;
     private Integer code;
     private String description;
+    //添加一个
 
-    public void setCode(Integer code) {
-        this.code = code;
-    }
+    private Class contentModelClass;
 
-    public void setDescription(String description) {
-        this.description = description;
+
+    public static Class getChanelModelClassByCode(Integer code) {
+        ChannelType[] values = values();
+        for (ChannelType value : values) {
+            if (value.getCode().equals(code)) {
+                return value.getContentModelClass();
+            }
+        }
+        return null;
     }
 }

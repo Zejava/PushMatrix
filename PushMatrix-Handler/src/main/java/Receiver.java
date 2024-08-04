@@ -22,11 +22,11 @@ public class Receiver {
     private SmsHandler smsHandler;
 
     @KafkaListener(topics = {"pushMatrix"}, groupId = "sms")
-    public void consumer(ConsumerRecord<?, String> consumerRecord) {
-        Optional<String> kafkaMessage = Optional.ofNullable(consumerRecord.value());
-        if (kafkaMessage.isPresent()) {
+    public void consumer(ConsumerRecord consumerRecord) {
+        Optional<String> kafkaMessage = Optional.ofNullable(consumerRecord.getValue());//用Optional.ofNullable（）方法包装值
+        if (kafkaMessage.isPresent()) {//避免直接调用可能为null的对象的方法而导致的NullPointerException
             List<TaskInfo> lists = JSON.parseArray(kafkaMessage.get(), TaskInfo.class);
-            for (TaskInfo taskInfo : lists) {
+            for (TaskInfo taskInfo : lists) {//可以考虑并行流或者批量处理提高性能 todo
                 smsHandler.doHandler(taskInfo);
             }
             log.info("receiver message:{}", JSON.toJSONString(lists));
