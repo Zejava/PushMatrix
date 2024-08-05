@@ -26,7 +26,7 @@ public class SendMqAction implements BusinessProcess {
     @Autowired
     private KafkaTemplate kafkaTemplate;
     @Value("${PushMatrix.topic.name}")
-    private String topicName;
+    private String topicName;//主题名
     @Override
     public void process(ProcessContext context) {
         SendTaskModel sendTaskModel = (SendTaskModel) context.getProcessModel();

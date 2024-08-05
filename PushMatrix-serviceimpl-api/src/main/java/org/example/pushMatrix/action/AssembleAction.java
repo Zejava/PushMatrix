@@ -35,7 +35,7 @@ import java.util.*;
 @Component
 public class AssembleAction implements BusinessProcess {
     @Autowired
-    private MessageTemplateDao messageTemplateDao;//jpa
+    private MessageTemplateDao messageTemplateDao;//jpa 存入数据库持久化
 
     @Override
     public void process(ProcessContext context) {
@@ -59,8 +59,8 @@ public class AssembleAction implements BusinessProcess {
     /**
      * 组装 TaskInfo 任务消息
      *
-     * @param sendTaskModel
-     * @param messageTemplate
+     * @param sendTaskModel 发送消息的任务模型参数
+     * @param messageTemplate  消息模板
      */
     private List<TaskInfo> assembleTaskInfo(SendTaskModel sendTaskModel, MessageTemplate messageTemplate) {
         List<MessageParam> messageParamList = sendTaskModel.getMessageParamList();
@@ -71,6 +71,7 @@ public class AssembleAction implements BusinessProcess {
                     .messageTemplateId(messageTemplate.getId())
                     //利用id生成工具生成businessId,实现唯一id
                     .businessId(TaskInfoUtils.generateBusinessId(messageTemplate.getId(), messageTemplate.getTemplateType()))
+                    //分割字符串后转为链表传递给set，保证receiver的唯一性
                     .receiver(new HashSet<>(Arrays.asList(messageParam.getReceiver().split(String.valueOf(StrUtil.C_COMMA)))))
                     .idType(messageTemplate.getIdType())
                     .sendChannel(messageTemplate.getSendChannel())
@@ -80,7 +81,6 @@ public class AssembleAction implements BusinessProcess {
                     .contentModel(getContentModelValue(messageTemplate, messageParam))
                     .deduplicationTime(messageTemplate.getDeduplicationTime())
                     .isNightShield(messageTemplate.getIsNightShield()).build();
-
             taskInfoList.add(taskInfo);
         }
 
@@ -88,7 +88,7 @@ public class AssembleAction implements BusinessProcess {
     }
 
     /**
-     * 获取 contentModel,替换占位符信息
+     * 利用反射去获取 contentModel,替换占位符信息
      */
     private static ContentModel getContentModelValue(MessageTemplate messageTemplate, MessageParam messageParam) {
         Integer sendChannel = messageTemplate.getSendChannel();

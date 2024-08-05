@@ -30,11 +30,9 @@ public class PipelineConfig {
     public ProcessTemplate commonSendTemplate() {
         ProcessTemplate processTemplate = new ProcessTemplate();
         ArrayList<BusinessProcess> processList = new ArrayList<>();
-
         processList.add(preParamAction());
         processList.add(assembleAction());
         processList.add(sendMqAction());
-
         processTemplate.setProcessList(processList);
         return processTemplate;
     }

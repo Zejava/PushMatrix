@@ -8,6 +8,8 @@ import java.util.Map;
 /**
  * @Author 泽
  * @Date 2024/8/3 20:45
+ * 消息模板中，使用占位符动态修改模板内容的类
+ * 通过两个map映射实现内容的动态更改 占位符通过映射转为消息实体然后把消息实体传入模板中
  */
 @Data
 @Accessors(chain = true)
