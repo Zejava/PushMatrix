@@ -11,4 +11,9 @@ public class PushMatrixConstant {
      */
     public final static Integer TRUE = 1;
     public final static Integer FALSE = 0;
+    /**
+     * 时间的格式
+     */
+
+    public final static String yyyyMMDD = "yyyyMMdd";
 }
