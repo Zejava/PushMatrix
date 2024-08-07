@@ -91,13 +91,15 @@ public class AssembleAction implements BusinessProcess {
      * 利用反射去获取 contentModel,替换占位符信息
      */
     private static ContentModel getContentModelValue(MessageTemplate messageTemplate, MessageParam messageParam) {
+        //通过反射获得对应消息模型类
         Integer sendChannel = messageTemplate.getSendChannel();
+        Class contentModelClass = ChannelType.getChanelModelClassByCode(sendChannel);
+
+        //// 得到模板的 msgContent 和 入参
         Map<String, String> variables = messageParam.getVariables();
         JSONObject jsonObject = JSON.parseObject(messageTemplate.getMsgContent());
-        //通过反射获得对应消息模型类
-        Class contentModelClass = ChannelType.getChanelModelClassByCode(sendChannel);
         /**
-         *  反射获取得到不同的渠道对应的值
+         *  反射获取得到不同的渠道对应的contentModel
          */
         Field[] fields = ReflectUtil.getFields(contentModelClass);
         ContentModel contentModel = (ContentModel) ReflectUtil.newInstance(contentModelClass);

@@ -1,7 +1,8 @@
 package org.example.pushMatrix.config;
 
+import org.example.pushMatrix.action.AfterParamCheckAction;
 import org.example.pushMatrix.action.AssembleAction;
-import org.example.pushMatrix.action.PreParamAction;
+import org.example.pushMatrix.action.PreParamCheckAction;
 import org.example.pushMatrix.action.SendMqAction;
 import org.example.pushMatrix.enums.BusinessCode;
 import org.example.pushMatrix.pipeline.BusinessProcess;
@@ -21,18 +22,22 @@ import java.util.Map;
 public class PipelineConfig {
     /**
      * 普通发送执行流程
-     * 1. 参数校验
+     * 1. 参数校验 对传入的参数和消息模板等服务端中的参数进行校验
      * 2. 组装参数
      * 3. 发送消息至MQ
+     *
      * @return
      */
-    @Bean("commonSendTemplate")//设计普通发送的责任链执行流程模板
+    @Bean("commonSendTemplate")
     public ProcessTemplate commonSendTemplate() {
         ProcessTemplate processTemplate = new ProcessTemplate();
         ArrayList<BusinessProcess> processList = new ArrayList<>();
-        processList.add(preParamAction());
+
+        processList.add(preParamCheckAction());
         processList.add(assembleAction());
+        processList.add(afterParamCheckAction());
         processList.add(sendMqAction());
+
         processTemplate.setProcessList(processList);
         return processTemplate;
     }
@@ -41,20 +46,21 @@ public class PipelineConfig {
      * pipeline流程控制器
      * 目前暂定只有 普通发送的流程
      * 后续扩展则加BusinessCode和ProcessTemplate
+     *
      * @return
      */
     @Bean
     public ProcessController processController() {
         ProcessController processController = new ProcessController();
-        Map<String, ProcessTemplate> templateConfig = new HashMap<>();
+        Map<String, ProcessTemplate> templateConfig = new HashMap<>(4);
         templateConfig.put(BusinessCode.COMMON_SEND.getCode(), commonSendTemplate());
         processController.setTemplateConfig(templateConfig);
         return processController;
     }
 
-
     /**
      * 组装参数Action
+     *
      * @return
      */
     @Bean
@@ -63,12 +69,23 @@ public class PipelineConfig {
     }
 
     /**
-     * 参数校验Action
+     * 前置参数校验Action
+     *
      * @return
      */
     @Bean
-    public PreParamAction preParamAction() {
-        return new PreParamAction();
+    public PreParamCheckAction preParamCheckAction() {
+        return new PreParamCheckAction();
+    }
+
+    /**
+     * 后置参数校验Action
+     *
+     * @return
+     */
+    @Bean
+    public AfterParamCheckAction afterParamCheckAction() {
+        return new AfterParamCheckAction();
     }
 
     /**
@@ -79,5 +96,4 @@ public class PipelineConfig {
     public SendMqAction sendMqAction() {
         return new SendMqAction();
     }
-
 }

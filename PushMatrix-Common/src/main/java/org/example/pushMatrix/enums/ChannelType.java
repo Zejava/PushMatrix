@@ -22,13 +22,15 @@ public enum ChannelType {
 //    OFFICIAL_ACCOUNT(50, "OfficialAccounts(服务号)"),
 //    MINI_PROGRAM(60, "miniProgram(小程序)")
     ;
+    /** 编码的值*/
     private Integer code;
+    /** 具体描述 */
     private String description;
-    //添加一个
+    /**内容模型的类*/
 
     private Class contentModelClass;
 
-
+//通过编码值获得内容模型反射类的方法
     public static Class getChanelModelClassByCode(Integer code) {
         ChannelType[] values = values();
         for (ChannelType value : values) {
