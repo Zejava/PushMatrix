@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Getter
 public enum ChannelType {
     //目前实现了短信 todo
-    SMS(30, "sms(短信)", SmsContentModel.class),
+    SMS(30, "sms(短信)", SmsContentModel.class,"sms"),
 //    EMAIL(40, "email(邮件)",),
 //    OFFICIAL_ACCOUNT(50, "OfficialAccounts(服务号)"),
 //    MINI_PROGRAM(60, "miniProgram(小程序)")
@@ -29,6 +29,10 @@ public enum ChannelType {
     /**内容模型的类*/
 
     private Class contentModelClass;
+    /**
+     * 英文标识
+     */
+    private String code_en;
 
 //通过编码值获得内容模型反射类的方法
     public static Class getChanelModelClassByCode(Integer code) {
@@ -36,6 +40,20 @@ public enum ChannelType {
         for (ChannelType value : values) {
             if (value.getCode().equals(code)) {
                 return value.getContentModelClass();
+            }
+        }
+        return null;
+    }
+    /**
+     * 通过code获取enum
+     * @param code
+     * @return
+     */
+    public static ChannelType getEnumByCode(Integer code) {
+        ChannelType[] values = values();
+        for (ChannelType value : values) {
+            if (value.getCode().equals(code)) {
+                return value;
             }
         }
         return null;
