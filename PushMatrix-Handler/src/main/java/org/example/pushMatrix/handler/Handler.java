@@ -11,6 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
  * 发送各个渠道的请求
  */
 public abstract class Handler {
+    /**
+     * 对应渠道的code
+     * 子类初始化的时候进行指定
+     */
+    protected Integer channelCode;
     @Autowired
     private HandlerHolder handlerHolder;
 
@@ -20,9 +25,7 @@ public abstract class Handler {
      */
     @PostConstruct
     private void init() {
-        for (ChannelType channelType : ChannelType.values()) {
-            handlerHolder.putHandler(channelType.getCode(), this);
-        }
+            handlerHolder.putHandler(channelCode, this);
     }
 
     public void doHandler(TaskInfo taskInfo) {

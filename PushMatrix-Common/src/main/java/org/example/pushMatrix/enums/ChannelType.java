@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.example.pushMatrix.dto.EmailContentModel;
 import org.example.pushMatrix.dto.SmsContentModel;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ import org.springframework.stereotype.Service;
 public enum ChannelType {
     //目前实现了短信 todo
     SMS(30, "sms(短信)", SmsContentModel.class,"sms"),
-//    EMAIL(40, "email(邮件)",),
+    EMAIL(40, "email(邮件)", EmailContentModel.class,"email"),
 //    OFFICIAL_ACCOUNT(50, "OfficialAccounts(服务号)"),
 //    MINI_PROGRAM(60, "miniProgram(小程序)")
     ;
