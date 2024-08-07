@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.pushMatrix.pipeline.ProcessModel;
-
 import java.util.List;
 
 /**

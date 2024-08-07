@@ -9,7 +9,6 @@ import org.example.pushMatrix.pipeline.ProcessController;
 import org.example.pushMatrix.service.SendService;
 import org.example.pushMatrix.vo.BasicResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

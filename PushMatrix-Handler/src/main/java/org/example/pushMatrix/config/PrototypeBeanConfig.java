@@ -1,11 +1,12 @@
 package org.example.pushMatrix.config;
 
+import org.example.pushMatrix.pending.Task;
+import org.example.pushMatrix.receiver.Receiver;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import javax.sound.midi.Receiver;
 
 /**
  * @Author 泽

@@ -19,7 +19,7 @@ import java.util.Map;
  */
 @RestController
 public class SendController {
-    @Autowired
+    @Resource
     private SendService sendService;
 
     @GetMapping("/sendSmsV2")

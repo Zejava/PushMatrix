@@ -7,6 +7,7 @@ import org.example.pushMatrix.domain.TaskInfo;
 import org.example.pushMatrix.handler.HandlerHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @Author 泽
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Component;
 @Data
 @Accessors(chain = true)
 @Slf4j
+@Component
 public class Task implements Runnable{
     @Autowired
     private HandlerHolder handlerHolder;
