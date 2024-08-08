@@ -38,7 +38,6 @@ public class SendServiceImpl implements SendService {
                 .response(BasicResultVO.success()).build();
 
         ProcessContext process = processController.process(context);
-
         return new SendResponse(process.getResponse().getCode(), process.getResponse().getMsg());
     }
 

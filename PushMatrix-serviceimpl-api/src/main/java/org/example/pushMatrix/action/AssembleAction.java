@@ -100,14 +100,18 @@ public class AssembleAction implements BusinessProcess {
         JSONObject jsonObject = JSON.parseObject(messageTemplate.getMsgContent());
         /**
          *  反射获取得到不同的渠道对应的contentModel
+         *  此处使用了hutool包的ReflectUtil工具类去做了反射异常校验，
+         *        通过标准java库需要处理一些繁琐的 try-catch 块来确保代码的健壮性和异常处理，比如
+         *        字段类型转换等
          */
         Field[] fields = ReflectUtil.getFields(contentModelClass);
         ContentModel contentModel = (ContentModel) ReflectUtil.newInstance(contentModelClass);
         for (Field field : fields) {
             String originValue = jsonObject.getString(field.getName());
-
+            //            进行替换，把反射对象设置对应的内容
             if (StrUtil.isNotBlank(originValue)) {
                 String resultValue = ContentHolderUtil.replacePlaceHolder(originValue, variables);
+                //获得后如果是bean对象就进行转换成bean，如果不是保持原来的字符串
                 ReflectUtil.setFieldValue(contentModel, field, resultValue);
             }
         }

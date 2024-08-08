@@ -49,7 +49,8 @@ public class SmsHandler extends Handler{
      */
     private String getSmsContent(TaskInfo taskInfo) {
         SmsContentModel smsContentModel = (SmsContentModel) taskInfo.getContentModel();
-        if (StrUtil.isNotBlank(smsContentModel.getUrl())) {
+        if (StrUtil.isNotBlank(smsContentModel.getUrl())) {//hutool包的StrUtil，如果是null，““，或者仅包含空白字符，则返回false
+            // 发送包含URL的短信
             return smsContentModel.getContent() + " " + smsContentModel.getUrl();
         } else {
             return smsContentModel.getContent();

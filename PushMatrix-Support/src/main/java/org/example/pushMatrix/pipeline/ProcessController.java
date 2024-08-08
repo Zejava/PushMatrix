@@ -28,7 +28,6 @@ public class ProcessController {
     private Map<String, ProcessTemplate> templateConfig = null;
     /**
      * 执行责任链
-     *
      * @param context
      * @return 返回流程上下文内容
      */
