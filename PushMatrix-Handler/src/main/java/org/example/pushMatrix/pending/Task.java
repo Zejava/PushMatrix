@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.checkerframework.checker.units.qual.A;
 import org.example.pushMatrix.domain.TaskInfo;
 import org.example.pushMatrix.handler.HandlerHolder;
+import org.example.pushMatrix.service.deduplication.DeduplicationRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -25,12 +26,16 @@ public class Task implements Runnable{
     @Autowired
     private HandlerHolder handlerHolder;
     private TaskInfo taskInfo;
+    @Autowired
+    private DeduplicationRuleService deduplicationRuleService;
 
     @Override
     public void run() {
         // 0. 丢弃消息
 
-        // 1. TODO 通用去重
+        // 1.平台通用去重
+        deduplicationRuleService.duplication(taskInfo);
+
 
         // 2. 真正发送消息
         handlerHolder.route(taskInfo.getSendChannel())
