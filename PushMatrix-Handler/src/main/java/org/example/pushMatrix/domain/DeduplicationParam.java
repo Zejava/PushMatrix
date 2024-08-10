@@ -1,7 +1,11 @@
 package org.example.pushMatrix.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.example.pushMatrix.enums.AnchorState;
 
 /**
  * @Author 泽
@@ -10,6 +14,8 @@ import lombok.Data;
  */
 @Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class DeduplicationParam {
     /**
      * TaskIno信息
@@ -20,10 +26,16 @@ public class DeduplicationParam {
      * 去重时间
      * 单位：秒
      */
+    @JSONField(name = "time")
     private Long deduplicationTime;
 
     /**
      * 需达到的次数去重
      */
+    @JSONField(name = "num")
     private Integer countNum;
+    /**
+     * 标识属于去重类型(数据埋点)
+     */
+    private AnchorState anchorState;
 }

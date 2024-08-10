@@ -2,3 +2,8 @@
 /PushMatrix-Support/target/
 /PushMatrix-Web/logs/
 /logs/
+/PushMatrix-Common/target/
+/PushMatrix-service-api/target/
+/PushMatrix-serviceimpl-api/target/
+/PushMatrix-serviceimpl-api/target/
+/PushMatrix-serviceimpl-api/target/classes/

@@ -1,7 +1,8 @@
-package org.example.pushMatrix.service.deduplication;
+package org.example.pushMatrix.deduplication.service;
 
 import cn.hutool.core.util.StrUtil;
 import org.example.pushMatrix.domain.TaskInfo;
+import org.example.pushMatrix.enums.DeduplicationType;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,7 +11,11 @@ import org.springframework.stereotype.Service;
  * 频次去重的服务
  */
 @Service
-public class FrequencyDeduplicationService extends AbstractDeduplicationService{
+public class FrequencyDeduplicationService extends AbstractDeduplicationService {
+    public FrequencyDeduplicationService() {
+        deduplicationType = DeduplicationType.FREQUENCY.getCode();
+    }
+
     private static final String PREFIX = "FRE";
 
     /**

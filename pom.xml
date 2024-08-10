@@ -96,6 +96,7 @@
                 <artifactId>tencentcloud-sdk-java</artifactId>
                 <version>3.1.390</version>
             </dependency>
+<!--            其他模块的依赖-->
             <dependency>
                 <groupId>org.example</groupId>
                 <artifactId>PushMatrix-service-api</artifactId>
@@ -106,7 +107,20 @@
                 <artifactId>PushMatrix-serviceimpl-api</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+            <!--apollo-->
+<!--            <dependency>-->
+<!--                <groupId>com.ctrip.framework.apollo</groupId>-->
+<!--                <artifactId>apollo-client-config-data</artifactId>-->
+<!--                <version>1.9.1</version>-->
+<!--            </dependency>-->
 
+
+            <!--注解打印日志-->
+            <dependency>
+                <groupId>cn.monitor4all</groupId>
+                <artifactId>log-record-starter</artifactId>
+                <version>1.0.4</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

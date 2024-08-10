@@ -1,10 +1,14 @@
-package org.example.pushMatrix.service.deduplication;
+package org.example.pushMatrix.deduplication.service;
 
 import cn.hutool.core.collection.CollUtil;
+import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.example.pushMatrix.constant.PushMatrixConstant;
+import org.example.pushMatrix.domain.AnchorInfo;
 import org.example.pushMatrix.domain.DeduplicationParam;
 import org.example.pushMatrix.domain.TaskInfo;
+import org.example.pushMatrix.deduplication.DeduplicationHolder;
+import org.example.pushMatrix.utils.LogUtils;
 import org.example.pushMatrix.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,15 +20,27 @@ import java.util.*;
  * 去重服务的抽象类
  */
 @Slf4j
-public abstract class AbstractDeduplicationService {
+public abstract class AbstractDeduplicationService implements DeduplicationService{
+    protected Integer deduplicationType;
+
+    @Autowired
+    private DeduplicationHolder deduplicationHolder;
+
+    @PostConstruct
+    private void init() {
+        deduplicationHolder.putService(deduplicationType, this);
+    }
+
     @Autowired
     private RedisUtils redisUtils;
+
+    @Override
     public void deduplication(DeduplicationParam param) {
         TaskInfo taskInfo = param.getTaskInfo();
-        Set<String> filterReceiver = new HashSet<>(taskInfo.getReceiver().size());//存储应该被过滤掉的接收者
+        Set<String> filterReceiver = new HashSet<>(taskInfo.getReceiver().size());
 
         // 获取redis记录
-        Set<String> readyPutRedisReceiver = new HashSet<>(taskInfo.getReceiver().size());//存储应该被保留并更新到Redis中的接收者
+        Set<String> readyPutRedisReceiver = new HashSet<>(taskInfo.getReceiver().size());
         List<String> keys = deduplicationAllKey(taskInfo);
         Map<String, String> inRedisValue = redisUtils.mGet(keys);
 
@@ -33,7 +49,7 @@ public abstract class AbstractDeduplicationService {
             String value = inRedisValue.get(key);
 
             // 符合条件的用户
-            if (value != null && Integer.valueOf(value) >= param.getCountNum()) {//判断是否超过阈值
+            if (value != null && Integer.valueOf(value) >= param.getCountNum()) {
                 filterReceiver.add(receiver);
             } else {
                 readyPutRedisReceiver.add(receiver);
@@ -44,7 +60,10 @@ public abstract class AbstractDeduplicationService {
         putInRedis(readyPutRedisReceiver, inRedisValue, param);
 
         // 剔除符合去重条件的用户
-        taskInfo.getReceiver().removeAll(filterReceiver);
+        if (CollUtil.isNotEmpty(filterReceiver)) {
+            taskInfo.getReceiver().removeAll(filterReceiver);
+            LogUtils.print(AnchorInfo.builder().businessId(taskInfo.getBusinessId()).ids(filterReceiver).state(param.getAnchorState().getCode()).build());
+        }
     }
 
 
@@ -81,6 +100,7 @@ public abstract class AbstractDeduplicationService {
 
     /**
      * 获取得到当前消息模板所有的去重Key
+     *
      * @param taskInfo
      * @return
      */
@@ -92,5 +112,6 @@ public abstract class AbstractDeduplicationService {
         }
         return result;
     }
+
 
 }

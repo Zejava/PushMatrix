@@ -2,13 +2,11 @@ package org.example.pushMatrix.pending;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.units.qual.A;
 import org.example.pushMatrix.domain.TaskInfo;
 import org.example.pushMatrix.handler.HandlerHolder;
-import org.example.pushMatrix.service.deduplication.DeduplicationRuleService;
+import org.example.pushMatrix.deduplication.DeduplicationRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 /**
  * @Author 泽
