@@ -1,4 +1,5 @@
 package org.example.pushMatrix.pending;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.extern.slf4j.Slf4j;
@@ -36,7 +37,11 @@ public class Task implements Runnable{
 
 
         // 2. 真正发送消息
-        handlerHolder.route(taskInfo.getSendChannel())
-                .doHandler(taskInfo);
+        try {
+            handlerHolder.route(taskInfo.getSendChannel())
+                    .doHandler(taskInfo);
+        } catch (TencentCloudSDKException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

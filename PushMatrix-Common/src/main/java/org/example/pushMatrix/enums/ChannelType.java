@@ -6,7 +6,6 @@ import lombok.Setter;
 import lombok.ToString;
 import org.example.pushMatrix.dto.EmailContentModel;
 import org.example.pushMatrix.dto.SmsContentModel;
-import org.springframework.stereotype.Service;
 
 /**
  * @Author 泽

@@ -25,19 +25,20 @@ public class SendServiceImpl implements SendService {
     private ProcessController processController;
     @Override
     public SendResponse send(SendRequest sendRequest) {
-
+        //1.组装发送消息任务的参数
         SendTaskModel sendTaskModel = SendTaskModel.builder()
                 .messageTemplateId(sendRequest.getMessageTemplateId())
                 .messageParamList(Arrays.asList(sendRequest.getMessageParam()))
                 .build();
-
+//2.组装责任链上下文，
         ProcessContext context = ProcessContext.builder()
                 .code(sendRequest.getCode())
                 .processModel(sendTaskModel)
                 .needBreak(false)
                 .response(BasicResultVO.success()).build();
-
+//3.任务交由责任链进行处理
         ProcessContext process = processController.process(context);
+        // 4.返回消息的处理结果
         return new SendResponse(process.getResponse().getCode(), process.getResponse().getMsg());
     }
 

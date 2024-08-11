@@ -1,10 +1,10 @@
 package org.example.pushMatrix.pending;
 
-import jakarta.annotation.PostConstruct;
 import org.example.pushMatrix.config.ThreadPoolConfig;
 import org.example.pushMatrix.utils.GroupIdMappingUtils;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

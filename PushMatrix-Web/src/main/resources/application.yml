@@ -37,3 +37,11 @@ spring:
         offset:
           reset: earliest
 
+      # apollo
+app:
+  id: PushMatrix
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: pushMatrix
+  meta: http://192.168.101.128:8071

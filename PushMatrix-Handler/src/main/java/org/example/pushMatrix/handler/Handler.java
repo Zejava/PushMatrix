@@ -1,9 +1,11 @@
 package org.example.pushMatrix.handler;
 
-import jakarta.annotation.PostConstruct;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import org.example.pushMatrix.domain.TaskInfo;
 import org.example.pushMatrix.enums.ChannelType;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @Author 泽
@@ -28,7 +30,7 @@ public abstract class Handler {
             handlerHolder.putHandler(channelCode, this);
     }
 
-    public void doHandler(TaskInfo taskInfo) {
+    public void doHandler(TaskInfo taskInfo) throws TencentCloudSDKException {
         handler(taskInfo);
     }
 
@@ -38,6 +40,6 @@ public abstract class Handler {
      * @param taskInfo
      * @return
      */
-    public abstract void handler(TaskInfo taskInfo);
+    public abstract void handler(TaskInfo taskInfo) throws TencentCloudSDKException;
 
 }

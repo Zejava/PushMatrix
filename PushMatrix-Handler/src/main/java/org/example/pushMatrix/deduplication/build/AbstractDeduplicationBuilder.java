@@ -1,11 +1,12 @@
 package org.example.pushMatrix.deduplication.build;
 
 import com.alibaba.fastjson.JSONObject;
-import jakarta.annotation.PostConstruct;
 import org.example.pushMatrix.deduplication.DeduplicationHolder;
 import org.example.pushMatrix.domain.DeduplicationParam;
 import org.example.pushMatrix.domain.TaskInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @Author 泽

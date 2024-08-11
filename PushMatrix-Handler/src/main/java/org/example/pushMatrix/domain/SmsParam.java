@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * @Author 泽
  * @Date 2024/8/3 17:25
- * 发送短信的有关参数
+ * 发送短信的有关参数 通用
  */
 @Data
 @Builder
@@ -29,12 +29,7 @@ public class SmsParam {
     private String content;
 
     /**
-     * 渠道商Id
+     * 发送账号
      */
-    private Integer supplierId;
-
-    /**
-     * 渠道商名字
-     */
-    private String supplierName;
+    private Integer sendAccount;
 }

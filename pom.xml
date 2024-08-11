@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.2</version>
+        <version>2.5.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
@@ -28,7 +28,6 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-
             <!--mysql驱动包和线程池驱动包-->
             <dependency>
                 <groupId>mysql</groupId>
@@ -55,7 +54,6 @@
             </dependency>
 
             <!--common工具包-->
-            <!--common工具包-->
             <!--http库-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -80,6 +78,7 @@
                 <version>1.2.78</version>
             </dependency>
 
+
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -88,7 +87,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
-                <version>3.3.2</version>
+                <version>2.5.6</version>
             </dependency>
 <!--            腾讯sdk短信服务-->
             <dependency>
@@ -107,13 +106,27 @@
                 <artifactId>PushMatrix-serviceimpl-api</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
-            <!--apollo-->
-<!--            <dependency>-->
-<!--                <groupId>com.ctrip.framework.apollo</groupId>-->
-<!--                <artifactId>apollo-client-config-data</artifactId>-->
-<!--                <version>1.9.1</version>-->
-<!--            </dependency>-->
+<!--            apollo-->
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client-config-data</artifactId>
+                <version>1.9.1</version>
+            </dependency>
+<!--redis-->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>2.7.2</version>
+            </dependency>
 
+
+
+            <!--邮件发送-->
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>1.6.2</version>
+            </dependency>
 
             <!--注解打印日志-->
             <dependency>
@@ -123,5 +136,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
 </project>

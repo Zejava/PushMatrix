@@ -28,7 +28,7 @@ public class PrototypeBeanConfig {
      */
     @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public Task task() {
+    public Task Prototypetask() {
         return new Task();
     }
 }

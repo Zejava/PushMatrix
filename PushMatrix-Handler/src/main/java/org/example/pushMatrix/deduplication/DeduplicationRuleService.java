@@ -1,5 +1,7 @@
 package org.example.pushMatrix.deduplication;
 
+import com.ctrip.framework.apollo.Config;
+import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
 import org.example.pushMatrix.constant.PushMatrixConstant;
 import org.example.pushMatrix.domain.DeduplicationParam;
 import org.example.pushMatrix.domain.TaskInfo;
@@ -19,9 +21,9 @@ public class DeduplicationRuleService {
     public static final String DEDUPLICATION_RULE_KEY = "deduplication";
     @Autowired
     private DeduplicationHolder deduplicationHolder;
-    //todo 待引入apollo
-//    @ApolloConfig("pushMatrix")
-//    private Config config;
+
+    @ApolloConfig("pushMatrix")
+    private Config config;
     public void duplication(TaskInfo taskInfo) {
             // 配置样例：{"deduplication_10":{"num":1,"time":300},"deduplication_20":{"num":5}}
             String deduplicationConfig = config.getProperty(DEDUPLICATION_RULE_KEY, PushMatrixConstant.APOLLO_DEFAULT_VALUE_JSON_OBJECT);//获取配置

@@ -1,15 +1,19 @@
 package org.example.pushMatrix.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
  * @Author 泽
  * @Date 2024/8/3 20:52
- * 发送单条消息的接口
+ * 消息请求的相关接口
  */
 @Data
 @Accessors(chain = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class SendRequest {
     /**
      * 执行业务类型

@@ -1,5 +1,6 @@
 package org.example.pushMatrix.script;
 
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import org.example.pushMatrix.domain.SmsParam;
 import org.example.pushMatrix.domain.SmsRecord;
 
@@ -16,5 +17,5 @@ public interface SmsScript {
      * @param smsParam 发送短信参数
      * @return 渠道商接口返回值
      */
-    List<SmsRecord> send(SmsParam smsParam);
+    List<SmsRecord> send(SmsParam smsParam) throws TencentCloudSDKException;
 }

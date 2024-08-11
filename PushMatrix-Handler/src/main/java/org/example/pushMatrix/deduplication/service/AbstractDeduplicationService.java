@@ -1,7 +1,6 @@
 package org.example.pushMatrix.deduplication.service;
 
 import cn.hutool.core.collection.CollUtil;
-import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.example.pushMatrix.constant.PushMatrixConstant;
 import org.example.pushMatrix.domain.AnchorInfo;
@@ -12,6 +11,7 @@ import org.example.pushMatrix.utils.LogUtils;
 import org.example.pushMatrix.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.PostConstruct;
 import java.util.*;
 
 /**

@@ -17,7 +17,7 @@ public class PushMatrixConstant {
 
     public final static String yyyyMMDD = "yyyyMMdd";
     /**
-     * apollo默认的值 todo 待引入
+     * apollo默认的值 todo
      */
     public final static String APOLLO_DEFAULT_VALUE_JSON_OBJECT = "{}";
     public final static String APOLLO_DEFAULT_VALUE_JSON_ARRAY = "[]";
