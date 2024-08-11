@@ -26,12 +26,6 @@ import java.util.List;
 @Component
 @Slf4j
 public class SmsHandler extends Handler{
-//    @Bean(name="entityManagerFactory")
-//    public LocalSessionFactoryBean sessionFactory() {
-//        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-//
-//        return sessionFactory;
-//    }
 
     @Autowired
     private SmsRecordDao smsRecordDao;//对消息持久化

@@ -1,5 +1,6 @@
 package org.example.pushMatrix.receiver;
 
+import jakarta.annotation.PostConstruct;
 import org.example.pushMatrix.utils.GroupIdMappingUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -7,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.annotation.KafkaListenerAnnotationBeanPostProcessor;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.lang.reflect.Method;
 import java.util.List;
 
