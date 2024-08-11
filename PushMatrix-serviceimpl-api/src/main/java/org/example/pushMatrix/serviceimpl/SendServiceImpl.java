@@ -39,7 +39,7 @@ public class SendServiceImpl implements SendService {
 //3.任务交由责任链进行处理
         ProcessContext process = processController.process(context);
         // 4.返回消息的处理结果
-        return new SendResponse(process.getResponse().getCode(), process.getResponse().getMsg());
+        return new SendResponse(process.getResponse().getStatus(), process.getResponse().getMsg());
     }
 
     @Override
@@ -57,7 +57,7 @@ public class SendServiceImpl implements SendService {
 
         ProcessContext process = processController.process(context);
 
-        return new SendResponse(process.getResponse().getCode(), process.getResponse().getMsg());
+        return new SendResponse(process.getResponse().getStatus(), process.getResponse().getMsg());
     }
 
 }

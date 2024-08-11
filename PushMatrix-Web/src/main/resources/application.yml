@@ -44,3 +44,9 @@ apollo:
     enabled: true
     namespaces: pushMatrix
   meta: http://192.168.101.128:8071
+
+#  swagger配置
+mvc:
+  pathmatch:
+    matching-strategy: ant_path_matcher
+
