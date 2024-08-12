@@ -16,6 +16,11 @@ public class PushMatrixConstant {
      */
 
     public final static String yyyyMMDD = "yyyyMMdd";
+
+    /**
+     * cron时间格式
+     */
+    public final static String CRON_FORMAT = "ss mm HH dd MM ? yyyy-yyyy";
     /**
      * apollo默认的值 todo
      */

@@ -6,6 +6,7 @@ import org.example.pushMatrix.domain.SendRequest;
 import org.example.pushMatrix.domain.SendResponse;
 import org.example.pushMatrix.enums.BusinessCode;
 import org.example.pushMatrix.service.SendService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,11 +22,17 @@ import java.util.Map;
  */
 @RestController
 public class SendController {
+    @Value("${test:默认值}")
+    private String a;
     @Resource
     private SendService sendService;
 
     @PostMapping("/send")
     public SendResponse sendSmsV2(@RequestBody SendRequest sendRequest) {
         return sendService.send(sendRequest);
+    }
+    @GetMapping("/s")
+    public String s(){
+        return  a;
     }
 }
