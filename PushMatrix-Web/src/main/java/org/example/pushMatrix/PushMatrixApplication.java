@@ -1,7 +1,7 @@
 package org.example.pushMatrix;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
-import org.example.pushMatrix.domain.SmsParam;
-import org.example.pushMatrix.script.TencentSmsScript;
+import org.example.pushMatrix.handler.domain.SmsParam;
+import org.example.pushMatrix.handler.script.TencentSmsScript;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 @SpringBootApplication
 @RestController
-@EnableJpaRepositories(basePackages = "org.example.pushMatrix.dao")
+@EnableJpaRepositories(basePackages = "org.example.pushMatrix.support.dao")
 public class PushMatrixApplication {
 @Autowired
 private TencentSmsScript tencentSmsScript;

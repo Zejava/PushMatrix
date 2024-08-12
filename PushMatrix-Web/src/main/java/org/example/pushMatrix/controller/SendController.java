@@ -1,19 +1,14 @@
 package org.example.pushMatrix.controller;
 
 import jakarta.annotation.Resource;
-import org.example.pushMatrix.domain.MessageParam;
-import org.example.pushMatrix.domain.SendRequest;
-import org.example.pushMatrix.domain.SendResponse;
-import org.example.pushMatrix.enums.BusinessCode;
-import org.example.pushMatrix.service.SendService;
+import org.example.pushMatrix.serviceapi.domain.SendRequest;
+import org.example.pushMatrix.serviceapi.domain.SendResponse;
+import org.example.pushMatrix.serviceapi.service.SendService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.HashMap;
-import java.util.Map;
 
 
 /**

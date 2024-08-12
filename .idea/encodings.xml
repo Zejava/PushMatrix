@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/PushMatrix-Common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PushMatrix-Common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PushMatrix-Cron/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PushMatrix-Cron/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PushMatrix-Handler/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PushMatrix-Support/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PushMatrix-Support/src/main/resources" charset="UTF-8" />
