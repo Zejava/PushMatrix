@@ -1,10 +1,10 @@
 package org.example.pushMatrix.handler.handler;
 
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import jakarta.annotation.PostConstruct;
 import org.example.pushMatrix.common.domain.TaskInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.annotation.PostConstruct;
 
 /**
  * @Author 泽

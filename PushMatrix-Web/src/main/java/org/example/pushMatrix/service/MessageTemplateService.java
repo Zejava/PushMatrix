@@ -28,10 +28,8 @@ public interface MessageTemplateService {
     Long count();
 
     /**
-     * 单个 保存或者更新
-     * 存在ID 更新
-     * 不存在ID保存
-     *
+     * 单个消息模板保存或者更新
+     * 存在ID 更新  不存在ID保存
      * @param messageTemplate
      * @return
      */

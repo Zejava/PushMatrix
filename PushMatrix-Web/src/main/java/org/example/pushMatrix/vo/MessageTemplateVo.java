@@ -1,5 +1,10 @@
 package org.example.pushMatrix.vo;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +13,10 @@ import java.util.Map;
  * @Date 2024/8/12 21:01
  * 消息模板的Vo
  */
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class MessageTemplateVo{
     /**
      * 返回List列表

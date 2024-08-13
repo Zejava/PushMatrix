@@ -1,6 +1,9 @@
 package org.example.pushMatrix.serviceapi.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import java.util.Map;
@@ -12,7 +15,9 @@ import java.util.Map;
  * 通过两个map映射实现内容的动态更改 占位符通过映射转为消息实体然后把消息实体传入模板中
  */
 @Data
-@Accessors(chain = true)
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class MessageParam {
     /**
      * 接收者
