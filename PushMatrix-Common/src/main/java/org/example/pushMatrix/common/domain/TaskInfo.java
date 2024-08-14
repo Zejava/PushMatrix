@@ -56,4 +56,8 @@ public class TaskInfo {
      * 发送消息的账号（邮件下可有多个发送账号、短信可有多个发送账号..）
      */
     private Integer sendAccount;
+    /**
+     * 屏蔽类型 夜间不屏蔽 夜间屏蔽等
+     */
+    private Integer shieldType;
 }

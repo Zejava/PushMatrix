@@ -70,12 +70,16 @@ public class MessageTempleController {
      */
     @GetMapping("/list")
     @Operation(summary ="/列表页")
-    public BasicResultVO queryList(MessageTemplateParam messageTemplateParam) {
-        List<Map<String, Object>> result = ConvertMap.flatList(messageTemplateService.queryList(messageTemplateParam), FLAT_FIELD_NAME);
+    public List<MessageTemplate> queryList(MessageTemplateParam messageTemplateParam) {
+        // 方法1.
+//        List<Map<String, Object>> result = ConvertMap.flatList(messageTemplateService.queryList(messageTemplateParam), FLAT_FIELD_NAME);
+//
+//        long count = messageTemplateService.count();
+//        MessageTemplateVo messageTemplateVo = MessageTemplateVo.builder().count(count).rows(result).build();
+//        return BasicResultVO.success(messageTemplateVo);
+        List<MessageTemplate> messageTemplates = messageTemplateService.queryList(messageTemplateParam);
 
-        long count = messageTemplateService.count();
-        MessageTemplateVo messageTemplateVo = MessageTemplateVo.builder().count(count).rows(result).build();
-        return BasicResultVO.success(messageTemplateVo);
+        return messageTemplates;
     }
 
     /**
@@ -83,9 +87,11 @@ public class MessageTempleController {
      */
     @GetMapping("query/{id}")
     @Operation(summary ="/根据Id查找" )
-    public BasicResultVO queryById(@PathVariable("id") Long id) {
-        Map<String, Object> result = ConvertMap.flatSingle(messageTemplateService.queryById(id), FLAT_FIELD_NAME);
-        return BasicResultVO.success(result);
+    public MessageTemplate queryById(@PathVariable("id") Long id) {
+//        Map<String, Object> result = ConvertMap.flatSingle(messageTemplateService.queryById(id), FLAT_FIELD_NAME);
+//        return BasicResultVO.success(result);
+        MessageTemplate messageTemplate = messageTemplateService.queryById(id);
+        return messageTemplate;
     }
 
     /**

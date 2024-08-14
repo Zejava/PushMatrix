@@ -10,6 +10,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 
 /**
  * @Author 泽
@@ -22,9 +24,9 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @Entity
 @Accessors(chain = true)
-public class MessageTemplate {
+public class MessageTemplate implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /**
@@ -36,10 +38,7 @@ public class MessageTemplate {
      * 审核状态
      */
     private Integer auditStatus;
-    /**
-     * 定时任务Id(由xxl-job返回)
-     */
-    private Integer cronTaskId;
+
     /**
      * 工单ID（审核模板走工单）
      */
@@ -49,6 +48,16 @@ public class MessageTemplate {
      * 消息状态
      */
     private Integer msgStatus;
+
+    /**
+     * 定时任务Id(由xxl-job返回)
+     */
+    private Integer cronTaskId;
+
+    /**
+     * 定时发送的人群的文件路径
+     */
+    private String cronCrowdPath;
 
     /**
      * 发送的Id类型
@@ -64,6 +73,11 @@ public class MessageTemplate {
      * 模板类型
      */
     private Integer templateType;
+
+    /**
+     * 屏蔽类型
+     */
+    private Integer shieldType;
 
     /**
      * 消息类型
@@ -114,8 +128,8 @@ public class MessageTemplate {
 
     /**
      * 是否删除
-     * 0：已删除
-     * 1：删除
+     * 0：未删除
+     * 1：已删除
      */
     private Integer isDeleted;
 
@@ -128,12 +142,5 @@ public class MessageTemplate {
      * 更新时间 单位s
      */
     private Integer updated;
-
-
-    /**
-     * 定时任务人群文件的路径
-     */
-
-    private String cronCrowdPath;
 
 }

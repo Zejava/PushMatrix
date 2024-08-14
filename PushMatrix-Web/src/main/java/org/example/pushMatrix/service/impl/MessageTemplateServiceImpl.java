@@ -1,8 +1,14 @@
 package org.example.pushMatrix.service.impl;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.text.CharSequenceUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
+import jakarta.validation.constraints.NotNull;
 import org.example.pushMatrix.common.constant.PushMatrixConstant;
 import org.example.pushMatrix.common.enums.AuditStatus;
 import org.example.pushMatrix.common.enums.MessageStatus;
@@ -17,11 +23,12 @@ import org.example.pushMatrix.support.dao.MessageTemplateDao;
 import org.example.pushMatrix.support.domain.MessageTemplate;
 import org.example.pushMatrix.vo.MessageTemplateParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
+import java.util.ArrayList;
 import java.util.List;
-
 /**
  * @Author 泽
  * @Date 2024/8/13 0:05
@@ -39,10 +46,33 @@ public class MessageTemplateServiceImpl implements MessageTemplateService {
 
     @Override
     public List<MessageTemplate> queryList(MessageTemplateParam param) {
+//        传页码进来和单页数更新pageRequest
+//                       页码-1
         PageRequest pageRequest = PageRequest.of(param.getPage() - 1, param.getPerPage());
-        return messageTemplateDao.findAllByIsDeletedEquals(PushMatrixConstant.FALSE, pageRequest);
-    }
+//        String creator = CharSequenceUtil.isBlank(param.getCreator()) ? PushMatrixConstant.DEFAULT_CREATOR : param.getCreator();
 
+        Page<MessageTemplate> messageTemplatePage = messageTemplateDao.findAll(new Specification<MessageTemplate>() {
+            @Override
+//            单体，定制查询，构建查询
+            public Predicate toPredicate(@NotNull Root<MessageTemplate> root, @NotNull CriteriaQuery<?> query, @NotNull CriteriaBuilder criteriaBuilder) {
+                List<Predicate> list = new ArrayList<>();
+//                增加搜索条件
+                if (CharSequenceUtil.isNotBlank(param.getKeywords())) {
+                    list.add(criteriaBuilder.like(root.get("name").as(String.class), "%" + param.getKeywords() + "%"));
+                }
+                list.add(criteriaBuilder.equal(root.get("isDeleted").as(Integer.class), PushMatrixConstant.FALSE));
+//                list.add(criteriaBuilder.equal(root.get("creator").as(String.class), creator));
+                Predicate[] p = new Predicate[list.size()];
+
+                query.where(criteriaBuilder.and(list.toArray(p)));
+                query.orderBy(criteriaBuilder.desc(root.get("updated")));
+
+                return query.getRestriction();
+            }
+        }, pageRequest);
+        List<MessageTemplate> content = messageTemplatePage.getContent();//查询的数据
+        return content;
+    }
     @Override
     public Long count() {
         return messageTemplateDao.countByIsDeletedEquals(PushMatrixConstant.FALSE);

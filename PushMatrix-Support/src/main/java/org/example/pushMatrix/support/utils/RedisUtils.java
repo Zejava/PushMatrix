@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,5 +63,43 @@ public class RedisUtils {
         } catch (Exception e) {
             log.error("redis pipelineSetEX fail! e:{}", Throwables.getStackTraceAsString(e));
         }
+    }
+    /**
+     * lpush 方法 并指定 过期时间
+     */
+    public void lPush(String key, String value, Long seconds) {
+        try {
+            redisTemplate.executePipelined((RedisCallback<String>) connection -> {
+                connection.lPush(key.getBytes(StandardCharsets.UTF_8), value.getBytes(StandardCharsets.UTF_8));
+                connection.expire(key.getBytes(StandardCharsets.UTF_8), seconds);
+                return null;
+            });
+        } catch (Exception e) {
+            log.error("RedisUtils#lPush fail! e:{}", Throwables.getStackTraceAsString(e));
+        }
+    }
+
+    /**
+     * lLen 方法
+     */
+    public Long lLen(String key) {
+        try {
+            return redisTemplate.opsForList().size(key);
+        } catch (Exception e) {
+            log.error("RedisUtils#lLen fail! e:{}", Throwables.getStackTraceAsString(e));
+        }
+        return 0L;
+    }
+
+    /**
+     * lPop 方法
+     */
+    public String lPop(String key) {
+        try {
+            return redisTemplate.opsForList().leftPop(key);
+        } catch (Exception e) {
+            log.error("RedisUtils#lPop fail! e:{}", Throwables.getStackTraceAsString(e));
+        }
+        return "";
     }
 }

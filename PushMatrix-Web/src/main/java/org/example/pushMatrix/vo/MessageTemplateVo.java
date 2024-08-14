@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.pushMatrix.support.domain.MessageTemplate;
 
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ public class MessageTemplateVo{
     /**
      * 返回List列表
      */
-    private List<Map<String,Object>> rows;
+    private List<MessageTemplate> messageTemplates;
 
     /**
      * 总条数

@@ -27,4 +27,5 @@ public class PushMatrixConstant {
     public final static String APOLLO_DEFAULT_VALUE_JSON_OBJECT = "{}";//json对象
     public final static String APOLLO_DEFAULT_VALUE_JSON_ARRAY = "[]";//json数组
 
+    public static final String DEFAULT_CREATOR = "";
 }

@@ -34,4 +34,8 @@ public class MessageTemplateParam {
      */
     private String msgContent;
 
+    private String creator;
+
+    private String keywords;
+
 }
