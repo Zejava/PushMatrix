@@ -40,14 +40,6 @@ public class MessageTemplate {
      * 定时任务Id(由xxl-job返回)
      */
     private Integer cronTaskId;
-
-    /**
-     * 定时发送的人群ID
-     * 1. 目前阶段直接填入Id测试
-     * 2. 正常是需要通过ID获取文件遍历每个Id
-     */
-    private String cronCrowdId;
-
     /**
      * 工单ID（审核模板走工单）
      */
@@ -137,16 +129,11 @@ public class MessageTemplate {
      */
     private Integer updated;
 
-    /**
-     * 消息去重时间 单位小时
-     */
-    private Integer deduplicationTime;
 
     /**
-     * 是否夜间屏蔽
-     * 0:不屏蔽
-     * 1：屏蔽
+     * 定时任务人群文件的路径
      */
-    private Integer isNightShield;
+
+    private String cronCrowdPath;
 
 }

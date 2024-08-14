@@ -1,4 +1,4 @@
-package org.example.pushMatrix.cron.config;
+package org.example.pushMatrix.cron.xxl.config;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import org.springframework.beans.factory.annotation.Value;

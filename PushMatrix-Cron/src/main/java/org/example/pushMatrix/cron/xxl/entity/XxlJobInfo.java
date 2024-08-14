@@ -1,4 +1,4 @@
-package org.example.pushMatrix.cron.entity;
+package org.example.pushMatrix.cron.xxl.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

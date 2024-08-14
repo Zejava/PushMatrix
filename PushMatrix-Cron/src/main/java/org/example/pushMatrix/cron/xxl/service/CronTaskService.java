@@ -1,7 +1,7 @@
-package org.example.pushMatrix.cron.service;
+package org.example.pushMatrix.cron.xxl.service;
 
-import org.example.pushMatrix.cron.entity.XxlJobGroup;
-import org.example.pushMatrix.cron.entity.XxlJobInfo;
+import org.example.pushMatrix.cron.xxl.entity.XxlJobGroup;
+import org.example.pushMatrix.cron.xxl.entity.XxlJobInfo;
 import org.example.pushMatrix.common.vo.BasicResultVO;
 
 /**

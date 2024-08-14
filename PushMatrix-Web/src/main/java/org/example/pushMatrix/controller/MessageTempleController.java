@@ -48,8 +48,8 @@ public class MessageTempleController {
     @Autowired
     private SendService sendService;
 
-    @Value("${pushMatrix.upload.crowd.path}")
-    private String dataPath;
+//    @Value("${pushMatrix.upload.crowd.path}")
+//    private String dataPath;
 
 
     /**
@@ -154,26 +154,26 @@ public class MessageTempleController {
     /**
      * 上传人群文件
      */
-    @PostMapping("upload")
-    @Operation(summary = "/上传人群文件")
-    public BasicResultVO upload(@RequestParam("file") MultipartFile file) {
-        String filePath = new StringBuilder(dataPath)
-                .append(IdUtil.fastSimpleUUID())
-                .append(file.getOriginalFilename())
-                .toString();
-        try {
-            File localFile = new File(filePath);
-            if (!localFile.exists()) {
-                localFile.mkdirs();
-            }
-            file.transferTo(localFile);
-
-
-        } catch (Exception e) {
-            log.error("MessageTemplateController#upload fail! e:{},params{}", Throwables.getStackTraceAsString(e), JSON.toJSONString(file));
-            return BasicResultVO.fail(RespStatusEnum.SERVICE_ERROR);
-        }
-        return BasicResultVO.success(MapUtil.of(new String[][]{{"value", filePath}}));
-    }
+//    @PostMapping("upload")
+//    @Operation(summary = "/上传人群文件")
+//    public BasicResultVO upload(@RequestParam("file") MultipartFile file) {
+//        String filePath = new StringBuilder(dataPath)
+//                .append(IdUtil.fastSimpleUUID())
+//                .append(file.getOriginalFilename())
+//                .toString();
+//        try {
+//            File localFile = new File(filePath);
+//            if (!localFile.exists()) {
+//                localFile.mkdirs();
+//            }
+//            file.transferTo(localFile);
+//
+//
+//        } catch (Exception e) {
+//            log.error("MessageTemplateController#upload fail! e:{},params{}", Throwables.getStackTraceAsString(e), JSON.toJSONString(file));
+//            return BasicResultVO.fail(RespStatusEnum.SERVICE_ERROR);
+//        }
+//        return BasicResultVO.success(MapUtil.of(new String[][]{{"value", filePath}}));
+//    }
 
 }
