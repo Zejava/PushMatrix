@@ -6,8 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.pushMatrix.serviceapi.domain.MessageParam;
 import org.example.pushMatrix.serviceimplapi.domain.SendTaskModel;
 import org.example.pushMatrix.common.enums.RespStatusEnum;
-import org.example.pushMatrix.support.pipeline.BusinessProcess;
-import org.example.pushMatrix.support.pipeline.ProcessContext;
+import org.example.pushMatrix.common.pipeline.BusinessProcess;
+import org.example.pushMatrix.common.pipeline.ProcessContext;
 import org.example.pushMatrix.common.vo.BasicResultVO;
 
 import java.util.List;

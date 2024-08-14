@@ -35,7 +35,7 @@ public class LogUtils extends CustomLogListener {
      * 记录打点信息
      */
     public static void print(AnchorInfo anchorInfo) {
-        anchorInfo.setTimestamp(System.currentTimeMillis());
+        anchorInfo.setLogTimestamp(System.currentTimeMillis());
         log.info(JSON.toJSONString(anchorInfo));
     }
 

@@ -3,6 +3,7 @@ package org.example.pushMatrix.handler.deduplication;
 import com.ctrip.framework.apollo.Config;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
 import org.example.pushMatrix.common.constant.PushMatrixConstant;
+import org.example.pushMatrix.common.enums.EnumUtil;
 import org.example.pushMatrix.handler.domain.DeduplicationParam;
 import org.example.pushMatrix.common.domain.TaskInfo;
 import org.example.pushMatrix.common.enums.DeduplicationType;
@@ -29,7 +30,7 @@ public class DeduplicationRuleService {
             String deduplicationConfig = config.getProperty(DEDUPLICATION_RULE_KEY, PushMatrixConstant.APOLLO_DEFAULT_VALUE_JSON_OBJECT);//获取配置
 
             //1. 获得去重的类型
-            List<Integer> deduplicationList = DeduplicationType.getDeduplicationList();
+            List<Integer> deduplicationList = EnumUtil.getCodeList(DeduplicationType.class);
             //2.遍历，根据去重的类型选择合适的构建器和处理器
             for (Integer deduplicationType : deduplicationList) {
                 DeduplicationParam deduplicationParam = deduplicationHolder.selectBuilder(deduplicationType).build(deduplicationConfig, taskInfo);

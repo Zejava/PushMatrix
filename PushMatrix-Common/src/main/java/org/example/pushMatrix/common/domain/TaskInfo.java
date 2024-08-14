@@ -5,7 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.pushMatrix.common.dto.ContentModel;
+import org.example.pushMatrix.common.pipeline.ProcessModel;
 
+import java.io.Serializable;
 import java.util.Set;
 
 /**
@@ -17,7 +19,11 @@ import java.util.Set;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaskInfo {
+public class TaskInfo implements Serializable, ProcessModel {
+    /**
+     * 业务消息发送Id, 用于链路追踪, 若不存在, 则使用 messageId
+     */
+    private String bizId;
     /**
      * 消息模板Id
      */

@@ -12,7 +12,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @AllArgsConstructor
-public enum AnchorState {
+public enum AnchorState implements PowerfulEnum{
     RECEIVE(10, "成功消费Kafka"),
     DISCARD(20, "消费被丢弃"),
     CONTENT_DEDUPLICATION(30, "消息被内容去重"),

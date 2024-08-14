@@ -18,7 +18,18 @@ import java.util.Set;
 @NoArgsConstructor
 public class AnchorInfo {
     /**
-     * 信息的接送者
+     * 业务发送消息唯一Id(数据追踪使用) 标记业务信息本身
+     * 生成逻辑参考 TaskInfoUtils
+     */
+    private String bizId;
+
+    /**
+     * 消息唯一Id(数据追踪使用)
+     * 生成逻辑参考 TaskInfoUtils
+     */
+    private String messageId;
+    /**
+     * 信息的接收者
      */
     private Set<String> ids;
     /**
@@ -31,7 +42,7 @@ public class AnchorInfo {
      */
     private Long businessId;
     /**
-     * 生成时间
+     * 日志的生成时间
      */
-    private long timestamp;
+    private long logTimestamp;
 }

@@ -12,7 +12,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @AllArgsConstructor
-public enum IdType {
+public enum IdType implements PowerfulEnum{
     USER_ID(10, "userid"),//用户id
     DID(20, "did"),//设备id
     PHONE(30, "phone"),//手机号

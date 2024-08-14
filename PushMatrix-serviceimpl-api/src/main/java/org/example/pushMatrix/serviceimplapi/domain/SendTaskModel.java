@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.pushMatrix.serviceapi.domain.MessageParam;
 import org.example.pushMatrix.common.domain.TaskInfo;
-import org.example.pushMatrix.support.pipeline.ProcessModel;
+import org.example.pushMatrix.common.pipeline.ProcessModel;
 import java.util.List;
 
 /**

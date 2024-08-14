@@ -1,4 +1,4 @@
-package org.example.pushMatrix.support.pipeline;
+package org.example.pushMatrix.common.pipeline;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import org.example.pushMatrix.common.vo.BasicResultVO;
+
+import java.io.Serializable;
 
 /**
  * @Author 泽
@@ -17,7 +19,7 @@ import org.example.pushMatrix.common.vo.BasicResultVO;
 @NoArgsConstructor
 @Builder
 @Accessors(chain = true)
-public class ProcessContext {
+public class ProcessContext <T extends ProcessModel> implements Serializable {
     /**
      * 标识责任链的code
      */
@@ -26,7 +28,7 @@ public class ProcessContext {
     /**
      * 存储责任链上下文数据的模型
      */
-    private ProcessModel processModel;
+    private T processModel;
 
     /**
      * 责任链中断的标识

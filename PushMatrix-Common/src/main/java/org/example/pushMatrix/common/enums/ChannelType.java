@@ -14,7 +14,7 @@ import org.example.pushMatrix.common.dto.SmsContentModel;
 @AllArgsConstructor
 @ToString
 @Getter
-public enum ChannelType {
+public enum ChannelType implements PowerfulEnum{
     //目前实现了短信 todo
     SMS(30, "sms(短信)", SmsContentModel.class,"sms"),
     EMAIL(40, "email(邮件)", EmailContentModel.class,"email"),

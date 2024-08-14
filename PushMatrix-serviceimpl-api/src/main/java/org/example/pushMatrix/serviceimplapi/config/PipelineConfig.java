@@ -5,9 +5,9 @@ import org.example.pushMatrix.serviceimplapi.action.AssembleAction;
 import org.example.pushMatrix.serviceimplapi.action.PreParamCheckAction;
 import org.example.pushMatrix.serviceimplapi.action.SendMqAction;
 import org.example.pushMatrix.serviceapi.enums.BusinessCode;
-import org.example.pushMatrix.support.pipeline.BusinessProcess;
-import org.example.pushMatrix.support.pipeline.ProcessController;
-import org.example.pushMatrix.support.pipeline.ProcessTemplate;
+import org.example.pushMatrix.common.pipeline.BusinessProcess;
+import org.example.pushMatrix.common.pipeline.ProcessController;
+import org.example.pushMatrix.common.pipeline.ProcessTemplate;
 import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;

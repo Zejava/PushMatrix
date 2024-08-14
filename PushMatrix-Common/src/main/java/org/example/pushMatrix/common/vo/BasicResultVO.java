@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.example.pushMatrix.common.enums.RespStatusEnum;
 
+import java.io.Serializable;
+
 /**
  * @Author 泽
  * @Date 2024/8/2 20:36
@@ -15,7 +17,7 @@ import org.example.pushMatrix.common.enums.RespStatusEnum;
 @ToString(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class BasicResultVO <T>{
+public class BasicResultVO <T> implements Serializable {
     /**
      * 响应状态码
      */
