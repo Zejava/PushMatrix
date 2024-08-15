@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * @Author 泽
  * @Date 2024/8/3 23:00
- * 责任链上下文的信息
+ * 责任链上下文的信息 用来保存责任链上下文信息
  */
 @Data
 @AllArgsConstructor

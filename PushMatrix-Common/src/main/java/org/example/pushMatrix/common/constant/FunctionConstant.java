@@ -7,6 +7,25 @@ package org.example.pushMatrix.common.constant;
  */
 public class FunctionConstant {
 
+    public static final String PERIOD = ".";
+    public static final String COMMA = ",";
+    public static final String COLON = ":";
+    public static final String SEMICOLON = ";";
+    public static final String POUND = "#";
+    public static final String SLASH = "/";
+    public static final String BACKSLASH = "\\";
+    public static final String EMPTY_STRING = "";
+    public static final String RADICAL = "|";
+    public static final String QM_STRING = "?";
+    public static final String EQUAL_STRING = "=";
+    public static final String AND_STRING = "&";
+    public static final String ONE = "1";
+    public static final String ZERO = "0";
+    public static final String MINUS_ONE = "-1";
+    public static final String YES = "Y";
+    public static final String NO = "N";
+    public static final char QM = '?';
+
     /**
      * boolean转换
      */

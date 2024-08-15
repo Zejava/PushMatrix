@@ -20,6 +20,11 @@ import java.util.Map;
 @NoArgsConstructor
 public class MessageParam {
     /**
+     * 业务消息发送Id, 用于链路追踪, 若不存在, austin 则生成一个消息Id
+     */
+    private String bizId;
+
+    /**
      * 接收者
      * 多个用,逗号号分隔开
      *

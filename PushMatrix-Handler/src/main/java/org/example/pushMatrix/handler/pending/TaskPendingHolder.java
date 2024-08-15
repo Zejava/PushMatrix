@@ -18,7 +18,7 @@ import java.util.concurrent.ExecutorService;
  */
 @Component
 public class TaskPendingHolder {
-    private Map<String, ExecutorService> taskPendingHolder = new HashMap<>(32);
+    private Map<String, ExecutorService> taskPendingHolder = new HashMap<>(32);//map映射实现一个消费者组对应一个线程
 
     /**
      * 获取得到所有的groupId
@@ -37,7 +37,7 @@ public class TaskPendingHolder {
     /**
      * 给每个渠道，每种消息类型初始化一个线程池
      *
-     * TODO 不同的 groupId 分配不同的线程和队列大小
+     * TODO 后续用动态线程池实现
      *
      */
     @PostConstruct
@@ -54,6 +54,6 @@ public class TaskPendingHolder {
      */
     public ExecutorService route(String groupId) {
         return taskPendingHolder.get(groupId);
-    }
+    }//根据消费者组得到对应线程池
 
 }

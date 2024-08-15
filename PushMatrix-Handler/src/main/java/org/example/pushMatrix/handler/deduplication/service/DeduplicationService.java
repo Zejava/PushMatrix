@@ -1,6 +1,6 @@
 package org.example.pushMatrix.handler.deduplication.service;
 
-import org.example.pushMatrix.handler.domain.DeduplicationParam;
+import org.example.pushMatrix.handler.deduplication.DeduplicationParam;
 
 /**
  * @Author 泽

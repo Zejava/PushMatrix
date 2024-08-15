@@ -1,7 +1,7 @@
 package org.example.pushMatrix.handler.deduplication.build;
 
 import cn.hutool.core.date.DateUtil;
-import org.example.pushMatrix.handler.domain.DeduplicationParam;
+import org.example.pushMatrix.handler.deduplication.DeduplicationParam;
 import org.example.pushMatrix.common.domain.TaskInfo;
 import org.example.pushMatrix.common.enums.AnchorState;
 import org.example.pushMatrix.common.enums.DeduplicationType;

@@ -15,6 +15,10 @@ import lombok.ToString;
 public enum AnchorState implements PowerfulEnum{
     RECEIVE(10, "成功消费Kafka"),
     DISCARD(20, "消费被丢弃"),
+    NIGHT_SHIELD(22, "夜间屏蔽"),
+
+    NIGHT_SHIELD_NEXT_SEND(24, "夜间屏蔽(次日早上9点发送)"),
+
     CONTENT_DEDUPLICATION(30, "消息被内容去重"),
     RULE_DEDUPLICATION(40, "消息被频次去重"),
     WHITE_LIST(50, "白名单过滤"),

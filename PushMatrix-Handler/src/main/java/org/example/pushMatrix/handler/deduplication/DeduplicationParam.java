@@ -1,4 +1,4 @@
-package org.example.pushMatrix.handler.domain;
+package org.example.pushMatrix.handler.deduplication;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;

@@ -15,6 +15,7 @@ import java.util.Objects;
  * @Author 泽
  * @Date 2024/8/4 8:43
  * 流程上下文控制器
+ * 得到任务模板和流程上下文，用责任链处理信息的类
  */
 @Slf4j
 @Data

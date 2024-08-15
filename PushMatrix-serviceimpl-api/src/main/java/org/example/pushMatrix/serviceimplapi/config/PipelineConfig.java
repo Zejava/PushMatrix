@@ -1,16 +1,17 @@
 package org.example.pushMatrix.serviceimplapi.config;
 
-import org.example.pushMatrix.serviceimplapi.action.AfterParamCheckAction;
-import org.example.pushMatrix.serviceimplapi.action.AssembleAction;
-import org.example.pushMatrix.serviceimplapi.action.PreParamCheckAction;
-import org.example.pushMatrix.serviceimplapi.action.SendMqAction;
 import org.example.pushMatrix.serviceapi.enums.BusinessCode;
-import org.example.pushMatrix.common.pipeline.BusinessProcess;
 import org.example.pushMatrix.common.pipeline.ProcessController;
 import org.example.pushMatrix.common.pipeline.ProcessTemplate;
+import org.example.pushMatrix.serviceimplapi.action.send.SendAfterCheckAction;
+import org.example.pushMatrix.serviceimplapi.action.send.SendAssembleAction;
+import org.example.pushMatrix.serviceimplapi.action.send.SendMqAction;
+import org.example.pushMatrix.serviceimplapi.action.send.SendPreCheckAction;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,28 +20,33 @@ import java.util.Map;
  * @Date 2024/8/4 8:42
  * 设计执行流程
  */
+@Configuration
 public class PipelineConfig {
+    @Autowired
+    private SendPreCheckAction sendPreCheckAction;
+    @Autowired
+    private SendAssembleAction sendAssembleAction;
+    @Autowired
+    private SendAfterCheckAction sendAfterCheckAction;
+    @Autowired
+    private SendMqAction sendMqAction;
     /**
      * 普通发送执行流程
-     * 1. 参数校验 对传入的参数和消息模板等服务端中的参数进行校验
+     * 1. 前置参数校验
      * 2. 组装参数
-     * 3. 发送消息至MQ
+     * 3. 后置参数校验
+     * 4. 发送消息至MQ
      *
      * @return
      */
     @Bean("commonSendTemplate")
     public ProcessTemplate commonSendTemplate() {
         ProcessTemplate processTemplate = new ProcessTemplate();
-        ArrayList<BusinessProcess> processList = new ArrayList<>();
-
-        processList.add(preParamCheckAction());
-        processList.add(assembleAction());
-        processList.add(afterParamCheckAction());
-        processList.add(sendMqAction());
-
-        processTemplate.setProcessList(processList);
+        processTemplate.setProcessList(Arrays.asList(sendPreCheckAction, sendAssembleAction,
+                sendAfterCheckAction, sendMqAction));
         return processTemplate;
     }
+
 
     /**
      * pipeline流程控制器
@@ -49,51 +55,12 @@ public class PipelineConfig {
      *
      * @return
      */
-    @Bean
-    public ProcessController processController() {
+    @Bean("apiProcessController")
+    public ProcessController apiProcessController() {
         ProcessController processController = new ProcessController();
         Map<String, ProcessTemplate> templateConfig = new HashMap<>(4);
         templateConfig.put(BusinessCode.COMMON_SEND.getCode(), commonSendTemplate());
         processController.setTemplateConfig(templateConfig);
         return processController;
-    }
-
-    /**
-     * 组装参数Action
-     *
-     * @return
-     */
-    @Bean
-    public AssembleAction assembleAction() {
-        return new AssembleAction();
-    }
-
-    /**
-     * 前置参数校验Action
-     *
-     * @return
-     */
-    @Bean
-    public PreParamCheckAction preParamCheckAction() {
-        return new PreParamCheckAction();
-    }
-
-    /**
-     * 后置参数校验Action
-     *
-     * @return
-     */
-    @Bean
-    public AfterParamCheckAction afterParamCheckAction() {
-        return new AfterParamCheckAction();
-    }
-
-    /**
-     * 发送消息至MQ的Action
-     * @return
-     */
-    @Bean
-    public SendMqAction sendMqAction() {
-        return new SendMqAction();
     }
 }

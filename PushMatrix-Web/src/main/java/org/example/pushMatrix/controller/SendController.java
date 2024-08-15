@@ -1,5 +1,7 @@
 package org.example.pushMatrix.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import org.example.pushMatrix.serviceapi.domain.SendRequest;
 import org.example.pushMatrix.serviceapi.domain.SendResponse;
@@ -16,18 +18,21 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2024/8/4 13:37
  */
 @RestController
+@Tag(name = "发送消息")
 public class SendController {
-    @Value("${test:默认值}")
-    private String a;
     @Resource
     private SendService sendService;
 
+    /**
+     * 单个文案下发相同的人
+     *
+     * @param sendRequest
+     * @return
+     */
+    @Operation(summary = "消息下发接口",description = "多渠道多类型下发消息，目前支持邮件和短信，类型支持：验证码、通知类、营销类。")
     @PostMapping("/send")
-    public SendResponse sendSmsV2(@RequestBody SendRequest sendRequest) {
+    public SendResponse send(@RequestBody SendRequest sendRequest) {
         return sendService.send(sendRequest);
     }
-    @GetMapping("/s")
-    public String s(){
-        return  a;
-    }
+
 }

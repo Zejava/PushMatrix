@@ -9,6 +9,7 @@ import org.example.pushMatrix.common.pipeline.ProcessController;
 import org.example.pushMatrix.serviceapi.service.SendService;
 import org.example.pushMatrix.common.vo.BasicResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -16,12 +17,13 @@ import java.util.Arrays;
 /**
  * @Author 泽
  * @Date 2024/8/3 23:14
- * 发送消息给用户的接口
+ * 发送消息发送情况给用户的接口
  */
 
 @Service
 public class SendServiceImpl implements SendService {
     @Autowired
+    @Qualifier("apiProcessController")
     private ProcessController processController;
     @Override
     public SendResponse send(SendRequest sendRequest) {

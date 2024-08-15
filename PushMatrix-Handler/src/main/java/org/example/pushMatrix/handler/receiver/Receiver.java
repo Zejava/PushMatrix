@@ -7,11 +7,16 @@ import org.example.pushMatrix.handler.pending.Task;
 import org.example.pushMatrix.handler.pending.TaskPendingHolder;
 import org.example.pushMatrix.handler.utils.GroupIdMappingUtils;
 import org.example.pushMatrix.common.domain.TaskInfo;
+import org.example.pushMatrix.support.constant.MessageQueuePipeline;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,8 +27,11 @@ import java.util.Optional;
  * 消费MQ的消息
  */
 @Slf4j
-public class Receiver {
-
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)//SCOPE_PROTOTYPE表示每次请求该bean时都会创建一个新的实例
+//@ConditionalOnProperty(name = "austin.mq.pipeline", havingValue = MessageQueuePipeline.KAFKA)//当name=havingValue，启动被这个注解注释的配置类或bean定义
+////这种机制它允许开发者根据不同的环境或配置条件来启用或禁用特定的功能。
+public class Receiver implements MessageReceiver{
     @Autowired
     private ApplicationContext context;
 
@@ -44,6 +52,7 @@ public class Receiver {
                 for (TaskInfo taskInfo : TaskInfoLists) {
                     Task task = context.getBean(Task.class).setTaskInfo(taskInfo);
                     taskPendingHolder.route(topicGroupId).execute(task);
+                    log.info("消息成功被消费者消费");
                 }
             }
         }

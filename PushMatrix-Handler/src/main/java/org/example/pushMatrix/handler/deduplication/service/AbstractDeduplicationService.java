@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.pushMatrix.handler.deduplication.DeduplicationHolder;
 import org.example.pushMatrix.common.constant.PushMatrixConstant;
 import org.example.pushMatrix.common.domain.AnchorInfo;
-import org.example.pushMatrix.handler.domain.DeduplicationParam;
+import org.example.pushMatrix.handler.deduplication.DeduplicationParam;
 import org.example.pushMatrix.common.domain.TaskInfo;
 import org.example.pushMatrix.support.utils.LogUtils;
 import org.example.pushMatrix.support.utils.RedisUtils;
