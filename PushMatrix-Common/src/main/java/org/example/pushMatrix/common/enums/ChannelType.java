@@ -31,7 +31,7 @@ public enum ChannelType implements PowerfulEnum{
     /**
      * 英文标识
      */
-    private String code_en;
+    private String codeEn;
 
 //通过编码值获得内容模型反射类的方法
     public static Class getChanelModelClassByCode(Integer code) {

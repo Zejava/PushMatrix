@@ -12,7 +12,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Getter
-public enum MessageType {
+public enum MessageType implements PowerfulEnum {
     NOTICE(10,"通知类消息","notice"),
     MARKETING(20,"营销类消息","marketing"),
     AUTH_CODE(30,"验证码消息","auth_code")
@@ -22,19 +22,10 @@ public enum MessageType {
     /**
      * 英文标识
      */
-    private String code_en;
+    private String codeEn;
     /**
      * 通过code获取enum
      * @param code
      * @return
      */
-    public static MessageType getEnumByCode(Integer code) {
-        MessageType[] values = values();
-        for (MessageType value : values) {
-            if (value.getCode().equals(code)) {
-                return value;
-            }
-        }
-        return null;
-    }
 }

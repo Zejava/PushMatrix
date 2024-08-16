@@ -2,6 +2,7 @@ package org.example.pushMatrix.handler.utils;
 
 import org.example.pushMatrix.common.domain.TaskInfo;
 import org.example.pushMatrix.common.enums.ChannelType;
+import org.example.pushMatrix.common.enums.EnumUtil;
 import org.example.pushMatrix.common.enums.MessageType;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class GroupIdMappingUtils {
         List<String> groupIds = new ArrayList<>();
         for (ChannelType channelType : ChannelType.values()) {
             for (MessageType messageType : MessageType.values()) {
-                groupIds.add(channelType.getCode_en() + "." + messageType.getCode_en());
+                groupIds.add(channelType.getCodeEn() + "." + messageType.getCodeEn());
             }
         }
         return groupIds;
@@ -33,8 +34,8 @@ public class GroupIdMappingUtils {
      * @return
      */
     public static String getGroupIdByTaskInfo(TaskInfo taskInfo) {
-        String channelCodeEn = ChannelType.getEnumByCode(taskInfo.getSendChannel()).getCode_en();
-        String msgCodeEn = MessageType.getEnumByCode(taskInfo.getMsgType()).getCode_en();
+        String channelCodeEn = EnumUtil.getEnumByCode(taskInfo.getSendChannel(), ChannelType.class).getCodeEn();
+        String msgCodeEn = EnumUtil.getEnumByCode(taskInfo.getMsgType(), MessageType.class).getCodeEn();
         return channelCodeEn + "." + msgCodeEn;
     }
 }

@@ -1,11 +1,13 @@
 package org.example.pushMatrix.support.utils;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.expression.MapAccessor;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.util.PropertyPlaceholderHelper;
 
 import java.text.MessageFormat;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @Author 泽
@@ -13,47 +15,47 @@ import java.util.Map;
  * 这里就是用来处理占位符内容替换的工具类
  */
 public class ContentHolderUtil {
-    // 占位符前缀
+    /**
+     * 占位符前缀
+     */
     private static final String PLACE_HOLDER_PREFIX = "{$";
-    // 占位符后缀
-    private static final String PLACE_HOLDER_ENDFIX = "}";
-    //在表达式求值过程中提供上下文环境
-    private static final StandardEvaluationContext evalutionContext;
-    //解析模板字符串中的占位符
+    /**
+     * 占位符后缀
+     */
+    private static final String PLACE_HOLDER_SUFFIX = "}";
+    private static final PropertyPlaceholderHelper PROPERTY_PLACEHOLDER_HELPER = new PropertyPlaceholderHelper(PLACE_HOLDER_PREFIX, PLACE_HOLDER_SUFFIX);
 
-    private static PropertyPlaceholderHelper propertyPlaceholderHelper = new PropertyPlaceholderHelper(
-            PLACE_HOLDER_PREFIX, PLACE_HOLDER_ENDFIX);
+    private ContentHolderUtil() {
 
-    static {
-        evalutionContext = new StandardEvaluationContext();
-        //添加了一个MapAccessor属性访问器，以便能够访问Map类型的数据
-        evalutionContext.addPropertyAccessor(new MapAccessor());
     }
 
     public static String replacePlaceHolder(final String template, final Map<String, String> paramMap) {
-        String replacedPushContent = propertyPlaceholderHelper.replacePlaceholders(template,
-                new CustomPlaceholderResolver(paramMap));
-        return replacedPushContent;
+        return PROPERTY_PLACEHOLDER_HELPER.replacePlaceholders(template, new CustomPlaceholderResolver(template, paramMap));
     }
 //根据占位符名称查找map对应的映射内容并进行替换
-    private static class CustomPlaceholderResolver implements PropertyPlaceholderHelper.PlaceholderResolver {
-        private Map<String, String> paramMap;
+private static class CustomPlaceholderResolver implements PropertyPlaceholderHelper.PlaceholderResolver {
+    private final String template;
+    private final Map<String, String> paramMap;
 
-        public CustomPlaceholderResolver(Map<String, String> paramMap) {
-            super();
-            this.paramMap = paramMap;
-        }
-
-        @Override
-        public String resolvePlaceholder(String placeholderName) {
-            String value = paramMap.get(placeholderName);
-            if (null == value) {
-                String errorStr = MessageFormat.format("template:{} require param:{},but not exist! paramMap:{}",
-                        placeholderName, paramMap.toString());
-                throw new IllegalArgumentException(errorStr);
-            }
-            return value;
-        }
+    public CustomPlaceholderResolver(String template, Map<String, String> paramMap) {
+        super();
+        this.template = template;
+        this.paramMap = paramMap;
     }
+
+    @Override
+    public String resolvePlaceholder(String placeholderName) {
+        if (Objects.isNull(paramMap)) {
+            String errorStr = MessageFormat.format("template:{0} require param:{1},but not exist! paramMap:{2}", template, placeholderName, paramMap);
+            throw new IllegalArgumentException(errorStr);
+        }
+        String value = paramMap.get(placeholderName);
+        if (StringUtils.isEmpty(value)) {
+            String errorStr = MessageFormat.format("template:{0} require param:{1},but not exist! paramMap:{2}", template, placeholderName, paramMap);
+            throw new IllegalArgumentException(errorStr);
+        }
+        return value;
+    }
+}
 
 }

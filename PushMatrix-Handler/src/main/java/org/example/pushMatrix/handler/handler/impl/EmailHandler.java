@@ -63,10 +63,7 @@ public class EmailHandler extends BaseHandler {
         return account;
     }
 
-    @Override
-    public void doHandler(TaskInfo taskInfo) {
 
-    }
 
     /**
      * 邮箱 api 不支持撤回消息

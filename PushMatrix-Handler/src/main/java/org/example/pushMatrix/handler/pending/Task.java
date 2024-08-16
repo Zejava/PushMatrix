@@ -20,9 +20,6 @@ import org.springframework.stereotype.Component;
  * @Author 泽
  * @Date 2024/8/7 15:44
  * 任务执行器 开启任务线程的类
- * 0. 丢弃消息 （消息存在问题时）
- * 1 通用去重功能
- * 2. 发送消息
  */
 @Data
 @Accessors(chain = true)
@@ -34,7 +31,6 @@ public class Task implements Runnable{
     @Qualifier("handlerProcessController")
     private ProcessController processController;
     private TaskInfo taskInfo;
-
 
     @Override
     public void run() {//启动责任链 使任务传入开始工作

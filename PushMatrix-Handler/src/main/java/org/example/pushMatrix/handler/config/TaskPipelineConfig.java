@@ -44,7 +44,7 @@ public class TaskPipelineConfig {
     @Bean("taskTemplate")
     public ProcessTemplate taskTemplate() {//构造任务流程模板，用链表保证任务按照业务流程顺序进行处理
         ProcessTemplate processTemplate = new ProcessTemplate();
-        processTemplate.setProcessList(Arrays.asList(discardAction, shieldAction, deduplicationAction, sendMessageAction));
+        processTemplate.setProcessList(Arrays.asList(discardAction, shieldAction,  sendMessageAction));
         return processTemplate;
     }
 

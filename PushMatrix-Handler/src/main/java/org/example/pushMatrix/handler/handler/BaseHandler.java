@@ -1,7 +1,10 @@
 package org.example.pushMatrix.handler.handler;
 
 import jakarta.annotation.PostConstruct;
+import org.example.pushMatrix.common.domain.AnchorInfo;
 import org.example.pushMatrix.common.domain.TaskInfo;
+import org.example.pushMatrix.common.enums.AnchorState;
+import org.example.pushMatrix.support.utils.LogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
@@ -27,6 +30,7 @@ public abstract class BaseHandler implements Handler{
     private void init() {
         handlerHolder.putHandler(channelCode, this);
     }
+
     /**
      * 统一处理的handler接口
      *
@@ -34,5 +38,13 @@ public abstract class BaseHandler implements Handler{
      * @return
      */
     public abstract boolean handler(TaskInfo taskInfo);
+    @Override
+    public void doHandler(TaskInfo taskInfo) {
+        if (handler(taskInfo)) {
+            LogUtils.print(AnchorInfo.builder().state(AnchorState.SEND_SUCCESS.getCode()).bizId(taskInfo.getBizId()).messageId(taskInfo.getMessageId()).businessId(taskInfo.getBusinessId()).ids(taskInfo.getReceiver()).build());
+            return;
+        }
+        LogUtils.print(AnchorInfo.builder().state(AnchorState.SEND_FAIL.getCode()).bizId(taskInfo.getBizId()).messageId(taskInfo.getMessageId()).businessId(taskInfo.getBusinessId()).ids(taskInfo.getReceiver()).build());
+    }
 
 }
