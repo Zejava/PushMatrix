@@ -1,5 +1,6 @@
 package org.example.pushMatrix.controller;
 
+import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
@@ -9,6 +10,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.example.pushMatrix.common.enums.RespStatusEnum;
+import org.example.pushMatrix.exception.CommonException;
 import org.example.pushMatrix.serviceapi.domain.MessageParam;
 import org.example.pushMatrix.serviceapi.domain.SendRequest;
 import org.example.pushMatrix.serviceapi.domain.SendResponse;
@@ -58,11 +60,8 @@ public class MessageTempleController {
      */
     @PostMapping("/save")
     @Operation(summary = "/保存数据")
-    public BasicResultVO saveOrUpdate(@RequestBody MessageTemplate messageTemplate) {
-
-        MessageTemplate info = messageTemplateService.saveOrUpdate(messageTemplate);
-
-        return BasicResultVO.success(info);
+    public MessageTemplate saveOrUpdate(@RequestBody MessageTemplate messageTemplate) {
+        return messageTemplateService.saveOrUpdate(messageTemplate);
     }
 
     /**
@@ -71,15 +70,8 @@ public class MessageTempleController {
     @GetMapping("/list")
     @Operation(summary ="/列表页")
     public List<MessageTemplate> queryList(MessageTemplateParam messageTemplateParam) {
-        // 方法1.
-//        List<Map<String, Object>> result = ConvertMap.flatList(messageTemplateService.queryList(messageTemplateParam), FLAT_FIELD_NAME);
-//
-//        long count = messageTemplateService.count();
-//        MessageTemplateVo messageTemplateVo = MessageTemplateVo.builder().count(count).rows(result).build();
-//        return BasicResultVO.success(messageTemplateVo);
-        List<MessageTemplate> messageTemplates = messageTemplateService.queryList(messageTemplateParam);
 
-        return messageTemplates;
+        return  messageTemplateService.queryList(messageTemplateParam);
     }
 
     /**
@@ -88,20 +80,7 @@ public class MessageTempleController {
     @GetMapping("query/{id}")
     @Operation(summary ="/根据Id查找" )
     public MessageTemplate queryById(@PathVariable("id") Long id) {
-//        Map<String, Object> result = ConvertMap.flatSingle(messageTemplateService.queryById(id), FLAT_FIELD_NAME);
-//        return BasicResultVO.success(result);
-        MessageTemplate messageTemplate = messageTemplateService.queryById(id);
-        return messageTemplate;
-    }
-
-    /**
-     * 根据Id复制
-     */
-    @PostMapping("copy/{id}")
-    @Operation(summary = "/根据Id复制")
-    public BasicResultVO copyById(@PathVariable("id") Long id) {
-        messageTemplateService.copy(id);
-        return BasicResultVO.success();
+        return messageTemplateService.queryById(id);
     }
 
 
@@ -138,7 +117,15 @@ public class MessageTempleController {
         return BasicResultVO.success(response);
     }
 
-
+    /**
+     * 获取需要测试的模板占位符
+     */
+    @PostMapping("test/content")
+    @Operation(summary = "/测试发送接口")
+    public String test(Long id) {
+        MessageTemplate messageTemplate = messageTemplateService.queryById(id);
+        return messageTemplate.getMsgContent();
+    }
     /**
      * 启动模板的定时任务
      */

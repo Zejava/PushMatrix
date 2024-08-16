@@ -29,4 +29,20 @@ public interface ChannelAccountDao extends JpaRepository<ChannelAccount, Long> {
      * @return
      */
     List<ChannelAccount> findAllByIsDeletedEqualsAndSendChannelEquals(Integer deleted, Integer channelType);
+
+    /**
+     * 根据创建者检索相关的记录
+     *
+     * @param creator
+     * @return
+     */
+    List<ChannelAccount> findAllByCreatorEquals(String creator);
+
+    /**
+     * 统计未删除的条数
+     *
+     * @param deleted
+     * @return
+     */
+    Long countByIsDeletedEquals(Integer deleted);
 }
