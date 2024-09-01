@@ -25,7 +25,7 @@ import java.util.Arrays;
 @Service
 @Slf4j
 public class NightShieldLazyPendingHandler {
-    private static final String NIGHT_SHIELD_BUT_NEXT_DAY_SEND_KEY = "night_shield_send";
+    private static final String NIGHT_SHIELD_BUT_NEXT_DAY_SEND_KEY = "night_shield_send";//存储需要在次日发送的任务信息。
     @Autowired
     private KafkaTemplate kafkaTemplate;
     @Value("${PushMatrix.topic.name}")
@@ -38,7 +38,7 @@ public class NightShieldLazyPendingHandler {
     @XxlJob("nightShieldLazyJob")
     public void execute() {
         log.info("NightShieldLazyPendingHandler#execute!");
-        SupportThreadPoolConfig.getPendingSingleThreadPool().execute(() -> {
+        SupportThreadPoolConfig.getPendingSingleThreadPool().execute(() -> {//将任务提交到一个单线程的线程池中执行。确保任务以串行的方式执行，避免并发问题。
             while (redisUtils.lLen(NIGHT_SHIELD_BUT_NEXT_DAY_SEND_KEY) > 0) {
                 String taskInfo = redisUtils.lPop(NIGHT_SHIELD_BUT_NEXT_DAY_SEND_KEY);
                 if (CharSequenceUtil.isNotBlank(taskInfo)) {

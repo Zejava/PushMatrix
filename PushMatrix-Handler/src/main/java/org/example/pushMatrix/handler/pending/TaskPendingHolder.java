@@ -33,7 +33,6 @@ public class TaskPendingHolder {
     @PostConstruct
     public void init() {
         /**
-         * example ThreadPoolName:austin.im.notice
          *
          * 可以通过apollo配置：dynamic-tp-apollo-dtp.yml  动态修改线程池的信息
          */
