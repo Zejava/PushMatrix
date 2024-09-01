@@ -1,8 +1,11 @@
 package org.example.pushMatrix.handler.pending;
 
+import com.dtp.core.thread.DtpExecutor;
 import jakarta.annotation.PostConstruct;
-import org.example.pushMatrix.handler.config.ThreadPoolConfig;
+import org.example.pushMatrix.handler.config.HandlerThreadPoolConfig;
 import org.example.pushMatrix.handler.utils.GroupIdMappingUtils;
+import org.example.pushMatrix.support.utils.ThreadPoolUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
@@ -18,34 +21,30 @@ import java.util.concurrent.ExecutorService;
  */
 @Component
 public class TaskPendingHolder {
-    private Map<String, ExecutorService> taskPendingHolder = new HashMap<>(32);//map映射实现一个消费者组对应一个线程
+    private Map<String, ExecutorService> holder = new HashMap<>(32);//map映射实现一个消费者组对应一个线程
 
     /**
      * 获取得到所有的groupId
      */
     private static List<String> groupIds = GroupIdMappingUtils.getAllGroupIds();
 
-
-    /**
-     * 线程池的参数
-     */
-    private Integer coreSize = 3;
-    private Integer maxSize = 3;
-    private Integer queueSize = 100;
-
-
-    /**
-     * 给每个渠道，每种消息类型初始化一个线程池
-     *
-     * TODO 后续用动态线程池实现
-     *
-     */
+    @Autowired
+    private ThreadPoolUtils threadPoolUtils;
     @PostConstruct
     public void init() {
+        /**
+         * example ThreadPoolName:austin.im.notice
+         *
+         * 可以通过apollo配置：dynamic-tp-apollo-dtp.yml  动态修改线程池的信息
+         */
         for (String groupId : groupIds) {
-            taskPendingHolder.put(groupId, ThreadPoolConfig.getThreadPool(coreSize, maxSize, queueSize));
+            DtpExecutor executor = HandlerThreadPoolConfig.getExecutor(groupId);
+            threadPoolUtils.register(executor);
+
+            holder.put(groupId, executor);
         }
     }
+
 
     /**
      * 得到对应的线程池
@@ -53,7 +52,7 @@ public class TaskPendingHolder {
      * @return
      */
     public ExecutorService route(String groupId) {
-        return taskPendingHolder.get(groupId);
+        return holder.get(groupId);
     }//根据消费者组得到对应线程池
 
 }
